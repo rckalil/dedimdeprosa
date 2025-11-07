@@ -1,5 +1,5 @@
+let texto = "Exemplo"
 
-
-function iniciarTutorial() {
+function exibirTexto() {
     
 }

@@ -233,3 +233,24 @@ textarea#biografia {
   width: 45%;
   float: right;
 }
+
+.jogo {
+    /* 1. Largura e Altura */
+    max-width: 700px; /* Define uma largura máxima para a caixa */
+    width: 90%;      /* A caixa ocupará 90% da tela em dispositivos menores */
+    min-height: 250px; /* Altura mínima para o conteúdo aparecer */
+    
+    /* 2. Centralização Horizontal */
+    margin: 40px auto; /* 'auto' nas laterais centraliza o bloco */
+    
+    /* 3. Estilo Visual (Opcional, mas recomendado) */
+    background-color: #ddffe6; /* Um fundo claro para destacar */
+    border: 1px solid #ff0000; /* Borda sutil */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 30px; /* Espaçamento interno para o texto não colar nas bordas */
+    
+    /* 4. Alinhamento do Conteúdo (Texto e Botões) */
+    color: #000000;
+    text-align: center; /* Centraliza textos e elementos inline (como botões) */
+}
