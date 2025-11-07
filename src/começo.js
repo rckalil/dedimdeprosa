@@ -7,14 +7,19 @@ const textosTutorial = [
     "Para você se familiarizar com o jogo, vamos acompanhar a aventura do herói Manoel.",
     
     // Slide 1
-    "À esquerda, você pode ver a ficha de personagem de Manoel, com todas as suas informações.\n\n" +
-    "Vamos passar por cada uma e exemplificar seus usos.",
+    "Nas bordas da tela, você pode ver a ficha de personagem de Manoel, com todas as suas informações.\n\n" +
+    "Vamos passar por cada uma e exemplificar seus usos.\n\n" +
+    "Aqui, destacado em verde, temos o nome do personagem, muito simples",
+
+    "Logo depois do nome, temos o Fôlego do personagem.\n\n" +
+    "O Fôlego basicamente indica o nível do seu personagem. Todo o resto depende de quanto fôlego você tem.\n\n" +
+    "O personagem mais simples possui 4 de fôlego. Geralmente, um aventureiro começa com um pouco mais, indicando seu ânimo diferenciado, que o motiva frente aos desafios."
 ];
 
 const destaquePorSlide = [
     null,                  // Slide 0: Nada destacado (ou o nome, se for a primeira coisa)
     "ficha-nome",          // Slide 1: Foca no Nome
-    "ficha-atributos",     // Slide 2: Foca no bloco de Atributos
+    "ficha-folego",     // Slide 2: Foca no bloco de Atributos
     "attr-potencia",       // Slide 3: Foca apenas no atributo Potência
     "ficha-citacoes",      // Slide 4: Foca nas citações
     "ficha-habilidades"    // Slide 5: Foca nas habilidades/ataques

@@ -279,7 +279,6 @@ textarea#biografia {
     padding: 10px;
     margin-left: 50px;
     margin-right: 50px;
-    border: 1px solid #a90000; /* Borda leve para separar as colunas */
 }
 
 /* --- Estilo Específico da Coluna Esquerda --- */
@@ -336,4 +335,8 @@ textarea#biografia {
     /* Adiciona uma transição suave para o efeito */
     transition: background-color 0.4s ease, box-shadow 0.4s ease; 
     box-shadow: 0 0 10px rgba(255, 153, 0, 0.7);
+}
+
+.atributo {
+  font-size: medium;
 }
