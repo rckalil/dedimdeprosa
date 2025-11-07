@@ -4,7 +4,7 @@
 const textosTutorial = [
     // Slide 0
     "Dedim de Prosa é um jogo de faz de conta, onde um Narrador apresenta desafios e cada jogador decide o que seu personagem fará.\n\n" + 
-    "Para você se familiarizar com o jogo, vamos acompanhar a aventura do herói Manoel.",
+    "Para você se familiarizar com o jogo, vamos conhecer o peprsonagem Manoel e acompanhar a aventura do herói.",
     
     // Slide 1
     "Nas bordas da tela, você pode ver a ficha de personagem de Manoel, com todas as suas informações.\n\n" +
@@ -33,10 +33,30 @@ const textosTutorial = [
 
     "Tato é referente a delicadeza, cuidado. A capacidade de perceber nuances, estabelecer conexões.\n\n" +
     "Enganar alguém, acalmar um cachorro com medo, dançar.\n\n" +
-    "Potência e tato também são opostos. Os dois têm energia. Potência é sobre impor energia, sobre seus arredores. Tato tem haver com primeiro receber estímulos do mundo.",
+    "Potência e tato também são opostos. Os dois têm energia. Potência é sobre impor energia sobre seus arredores. Tato tem haver com perceber estímulos do mundo.",
 
+    "Você pode aplicar esforço sobre um atributo.\n\n" +
     "Se você quiser muito escalar um muro, e o Narrador do jogo diz que você precisa de um 5, mas você só tira 4, você pode se esforçar.\n\n" +
-    "O esforço permite que você receba +1 na hora, mas você vai ter -1 no atributo oposto por um tempo. Geralmente é até vocês passarem de uma situação à outra."
+    "O esforço permite que você receba +1 na hora, mas você vai ter -1 no atributo oposto por um tempo. Geralmente é até vocês passarem de uma situação à outra.",
+
+    "Um personagem possui uma mandinga diferente para cada 3 pontos de fôlego. Assim, Manoel só possui uma. As mandingas podem ser usadas por um personagem para ganhar vantagens no jogo.\n\n" +
+    "Por exemplo, um personagem pode ter uma mandinga que diz \"Que Deus o abençoe\", permitindo a ele rolar concentração para restaurar o fôlego de alguém. Ou \"Eu sou o mais forte\", permitindo realizar um ataque com um dado maior de potência.\n\n" +
+    "Manoel possui \"Eu já servi à Coroa\". Então, durante o jogo, ele pode gastar 1 de fôlego para usar a sua mandinga. Ele pode, por exemplo, conhecer os mapas de uma região, do tempo em que esteve no exército, então não se perde com facilidade.\n\n" +
+    "Ou ele gasta um fôlego para ser bem recebido pelos aldeões de uma vila. Você sempre pode pensar em novos efeitos, conversando com o Narrador para fazer sentido na estória.\n\n" +
+    "Contudo, as mandingas têm um efeito duplo. Assim como elas expandem as capacidades do personagem, elas o limitam. Quando for apropriado, o Narrador pode dar um ponto de fôlego ao jogador para ativar a mandinga de forma negativa.\n\n" +
+    "Um personagem com \"Que Deus o abençoe\" pode ser compelido a ajudar os outros, mesmo quando não é conveniente ao grupo. Um com \"Eu sou o mais forte\" pode ser extremamente impulsivo e atralhar negociações. No caso de Manoel, ele ter sido do exército pode dificultar que ele chegue despercebido nos lugares, pois muitos já o conhecem; ou algumas pessoas podem não ficar confortáveis dando informações a ele.",
+
+    "A história do personagem é muito importante pra dar um gostinho ao jogo. Quando você está criando seu personagem, pensar em quem ele é e o que faz também te ajuda a escolher seus atributos, mandingas e práticas (calma, já chegaremos nas práticas).\n\n" +
+    "Você pode escrever um texto tão breve ou complexo como queira, só divirta-se. E faça um personagem que nos divirta, que dê emoção de jogar.",
+
+    "As práticas são muito importantes para o seu personagem. Elas geralmente estão ligadas a um equipamento e, além de poderem dar algum bônus, elas permitem fazer mais coisas.\n\n" +
+    "Uma espada permite ataques mais fortes; com um kit médico, você pode suturar feridas; uma luneta permite ver a distâncias maiores; você pode tocar com uma flauta.\n\n" +
+    "A prática é uma atividade à qual o personagem se dedica, e ela é representada pelo equipamento que ele usa. Um personagem consegue se dedicar bem a uma prática a cada 2 pontos de fôlego que possui.\n\n" +
+    "Portanto, Manoel possui prática em 2 equipamentos. A espada lhe concede +2 de potência quando ele está lutando. Além disso, com a espada você pode dizer que decapitou seu inimigo ou cortou a ponte elvadiça - muito mais maneiro.\n\n" +
+    "E, ele também possui um laço. Com esse laço, Manoel não ganha bônus, mas ele pode usar sua potência para laçar os outros, prendê-los de longe.",
+
+    "Bem, agora, você já pode criar seu próprio personagem. Mas não se preocupe, se ainda tiver dúvidas, vamos ver Manoel em ação, num exemplo ligeiro."
+
 ];
 
 const destaquePorSlide = [
@@ -48,7 +68,11 @@ const destaquePorSlide = [
     "attr-concentracao",    // Slide 5: Foca nas habilidades/ataques
     "attr-potencia",
     "attr-tato",
-    "ficha-atributos"
+    "ficha-atributos",
+    "ficha-mandingas",
+    "ficha-historia",
+    "ficha-praticas",
+    null
 ];
 
 let indiceTutorial = 0; 
@@ -83,19 +107,6 @@ function atualizarTextoTutorial() {
     const btnPrev = document.querySelector('.menu button:first-child');
     const btnNext = document.querySelector('.menu button:last-child');
     
-    if (btnPrev && btnNext) {
-        // Desativa 'Voltar' no primeiro slide
-        btnPrev.disabled = (indiceTutorial === 0);
-        // Desativa 'Avançar' no último slide
-        btnNext.disabled = (indiceTutorial === textosTutorial.length - 1);
-        
-        // Exemplo: se for o último slide, mude o texto do botão 'Avançar'
-        if (indiceTutorial === textosTutorial.length - 1) {
-            btnNext.textContent = "Começar Criação"; 
-        } else {
-            btnNext.textContent = "Avançar";
-        }
-    }
 
     gerenciarDestaque(indiceTutorial);
 }
@@ -106,10 +117,6 @@ function avancarTutorial() {
     if (indiceTutorial < textosTutorial.length - 1) {
         indiceTutorial++;
         atualizarTextoTutorial();
-    } else if (indiceTutorial === textosTutorial.length - 1) {
-        // Comportamento especial ao final: Inicia a criação de personagem
-        // Chame aqui a função de navegação de página, se for o caso.
-        // iniciarCriacao(); 
     }
 }
 

@@ -28,7 +28,7 @@ function getBasePath() {
     // E você está em:
     // C:/.../dedimdeprosa/index.html
     // O caminho base é simplesmente o nome da pasta (site/)
-    return "site/"; 
+    return "/"; 
     
   } else {
     // Lógica para GitHub Pages (http/https)
@@ -41,10 +41,10 @@ function getBasePath() {
 
     // Retorna: /dedimdeprosa/site/
     if (repoName) {
-      return "/" + repoName + "/site/";
+      return "/" + repoName + "/";
     }
     // Caso especial onde o site está na raiz do domínio
-    return "/site/";
+    return "/";
   }
 }
 
@@ -60,7 +60,7 @@ function nextStep() {
       localStorage.clear();
     }
     const nextPage = pages[currentIndex + 1];
-    window.location.href = getBasePath() + nextPage;
+    window.location.href = "site/" +  nextPage;
   }
 }
 
@@ -70,6 +70,10 @@ function prevStep() {
 
   if (currentIndex > 0) {
     const prevPage = pages[currentIndex - 1];
-    window.location.href = getBasePath() + prevPage;
+    window.location.href = "site/" + prevPage;
   }
+}
+
+function menu() {
+  window.location.href = ".." + getBasePath() + "index.html";
 }
