@@ -8,21 +8,72 @@
 </head>
 <body>
     
-    <div class="container">
-        <h1>Tutorial</h1>
-
-        <div class="jogo">
-            <p id="exibirTexto"></p>
-        </div>
+    <h1>Tutorial</h1>
+    <div class="container-c-sheet">
+        <div class="sheet-col left-col">
         
-        <div class="menu">
-            <button onclick="prevStep()">Voltar</button>
-            
-            <button onclick="nextStep()">Avançar</button>
+        <div class="sheet-header">
+            <div id="ficha-nome" class="sheet-name-box">
+                <p>Manoel</p>
+                <hr>
+            </div>
+            <div id="ficha-flutuante" class="sheet-float-value">
+                <span class="icon-wind">💨</span> 5
+            </div>
         </div>
+
+        <div id="ficha-historia" class="sheet-description">
+            <p>Manoel é um ex-militar. Seu tempo de serviço o tornou potente e atento aos seus arredores. Ainda carrega uma espada que usava no exército e um laço que aprendeu a manejar na juventude.</p>
+        </div>
+
+        <div id="ficha-atributos" class="sheet-stats-grid">
+            <div id="attr-potencia" class="stat-box top-left">
+                <span class="icon">💪</span> 1d6
+            </div>
+            <div id="attr-atencao" class="stat-box top-right">
+                <span class="icon">👁️</span> 1d4
+            </div>
+            <div id="attr-concentracao" class="stat-box bottom-left">
+                <span class="icon">✨</span> 1d6
+            </div>
+            <div id="attr-tato" class="stat-box bottom-right">
+                <span class="icon">🤏</span> 1d4
+            </div>
+            </div>
     </div>
 
 
-    <script src="../src/comum.js"></script>
+        
+        <div class="conteudo">
+        <div class="jogo">
+            <!-- <div id="exibirTexto">Texto</div> -->
+        </div>
+        <div class="menu">
+            <button onclick="voltarTutorial()">Voltar</button>
+            
+            <button onclick="avancarTutorial()">Avançar</button>
+        </div>
+        </div>
+
+        <div class="sheet-col right-col">
+        
+        <div id="ficha-citacoes" class="sheet-motivations">
+            <p>"Eu já servi à Coroa"</p>
+            <p>"Eu já servi à Coroa"</p>
+            <p>"Eu já servi à Coroa"</p>
+        </div>
+
+        <div id="ficha-habilidades" class="sheet-abilities">
+            <p>Espada (Potência + 2)</p>
+            <p>Laço (Potência para agarrar a distância)</p>
+            <p>Laço (Potência para agarrar a distância)</p>
+            <p>Espada (Potência + 2)</p>
+        </div>
+    </div>
+    </div>
+    
+
+
+    <script src="../src/começo.js"></script>
 </body>
 </html>
