@@ -1,0 +1,235 @@
+body {
+  background-color: #111;
+  color: #eee;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 40vw;
+  margin: auto;
+  padding: 2rem;
+}
+
+h1, h2 {
+  color: #cc0000;
+  text-shadow: 1px 1px 3px #000;
+}
+
+label {
+  display: block;
+  margin: 1rem 0;
+}
+
+input {
+  padding: 0.5rem;
+  background-color: #222;
+  color: #eee;
+  border: 1px solid #cc0000;
+  border-radius: 4px;
+}
+
+button {
+  margin: 1rem 0.5rem 0 0;
+  padding: 0.5rem 1rem;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.step {
+  display: accordion;
+}
+
+.step.active {
+  display: block;
+}
+
+pre {
+  background: #222;
+  padding: 1rem;
+  border: 1px solid #cc0000;
+  border-radius: 4px;
+  overflow-x: auto;
+  color: #0f0;
+}
+
+.attribute-group {
+  background: #1a1a1a;
+  border: 1px solid #cc0000;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+.drag-area {
+  margin: 1rem 0;
+  background: #1a1a1a;
+  padding: 1rem;
+  border: 1px solid #cc0000;
+  border-radius: 6px;
+  position: fixed;
+  right: 17vw;
+  top: 17vh;
+  width: 10vw;
+}
+
+.values-pool {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.draggable {
+  background: #cc0000;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: grab;
+  user-select: none;
+}
+
+.attr-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.dropzone {
+  background: #222;
+  border: 2px dashed #cc0000;
+  padding: 1rem;
+  width: 10vw;
+  text-align: center;
+  border-radius: 6px;
+  min-height: 50px;
+  position: relative;
+}
+
+.dropzone.filled {
+  background-color: #330000;
+}
+
+.dropzone .draggable {
+  cursor: default;
+}
+
+select {
+  padding: 0.5em;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #111;
+  color: #fff;
+  font-size: 1em;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+select:focus {
+  outline: none;
+  border-color: #c00;
+  box-shadow: 0 0 5px #c00;
+}
+
+.clan-desc {
+  background-color: #222;
+  color: #ccc;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 1em;
+  margin-top: 1em;
+  max-width: 40vw;
+}
+
+.imagem-lateral {
+  position: fixed;
+  top: 0;
+  height: 100vh; /* altura total da tela */
+  object-fit: cover;
+  z-index: -1; /* para não cobrir o conteúdo */
+}
+
+.imagem-lateral.esquerda {
+  left: 0;
+  height: 70vh; /* altura da imagem lateral esquerda */
+  top: 12vh; /* ajusta a posição vertical da imagem lateral esquerda */
+}
+
+.imagem-lateral.direita {
+  right: 0;
+  height: 70vh; /* altura da imagem lateral direita */
+  top: 12vh; /* ajusta a posição vertical da imagem lateral direita */
+}
+
+.dist {
+  margin: 1rem 0;
+  background: #1a1a1a;
+  padding: 1rem;
+  border: 1px solid #cc0000;
+  border-radius: 6px;
+  position: fixed;
+  left: 2vw;
+  top: 10vh;
+  width: 22vw;
+}
+
+.especial {
+  color: #c00;
+}
+
+.disciplina-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  width: 35vw;
+}
+/* 
+#disciplinasContainer {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  width: 500px;
+} */
+
+#painelDetalhes {
+  margin: 1rem 0;
+  background: #1a1a1a;
+  padding: 1rem;
+  border: 1px solid #cc0000;
+  border-radius: 6px;
+  position: fixed;
+  right: 7vw;
+  top: 16vh;
+  width: 20vw;
+}
+
+.menu {
+  margin: 1rem 0;
+  padding: 1rem;
+  position: fixed;
+  right: 7vw;
+  top: 5vb;
+  width: 20vw;
+}
+
+textarea#biografia {
+  background-color: #444;
+}
+
+.lcol {
+  width: 45%;
+  float: left;
+}
+
+.rcol {
+  width: 45%;
+  float: right;
+}

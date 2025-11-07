@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ficha de Vampiro: A Máscara</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <!-- Imagem da esquerda -->
+  <img src="img/rosa.png" class="imagem-lateral esquerda" alt="Imagem Esquerda"/>
+
+  <!-- Imagem da direita -->
+  <img src="img/vinho.png" class="imagem-lateral direita" alt="Imagem Direita"/>
+  <div class="container">
+    <h1>Vampiro: A Máscara</h1>
+
+    <!-- Etapa 2: Atributos (arrastar e soltar) -->
+    <section id="step2" class="step">
+      <h2>Distribuição de Atributos</h2>
+      <p>Arraste os valores abaixo para os atributos. Cada número só pode ser usado uma vez.</p>
+
+      <div class="drag-area">
+        <h4>Valores disponíveis:</h4>
+        <div id="valuesPool" class="values-pool">
+          <!-- Criado dinamicamente por JS -->
+        </div>
+      </div>
+
+      <div class="attribute-dropzones">
+        <h3>Físicos</h3>
+        <div class="attr-group">
+          <div class="dropzone" data-attr="forca">Força</div>
+          <div class="dropzone" data-attr="destreza">Destreza</div>
+          <div class="dropzone" data-attr="vigor">Vigor</div>
+        </div>
+
+        <h3>Sociais</h3>
+        <div class="attr-group">
+          <div class="dropzone" data-attr="carisma">Carisma</div>
+          <div class="dropzone" data-attr="manipulacao">Manipulação</div>
+          <div class="dropzone" data-attr="autocontrole">Auto-controle</div>
+        </div>
+
+        <h3>Mentais</h3>
+        <div class="attr-group">
+          <div class="dropzone" data-attr="percepcao">Percepção</div>
+          <div class="dropzone" data-attr="inteligencia">Inteligência</div>
+          <div class="dropzone" data-attr="raciocinio">Raciocínio</div>
+        </div>
+      </div>
+
+      
+    </section>
+    <div class="menu">
+      <button onclick="prevStep()">Voltar</button>
+      <button onclick="validateDraggedAttributes()">Próximo</button>
+    </div>
+    <script src="comum.js"></script>
+    <script src="atributos.js"></script>
+  </body>
+</html>

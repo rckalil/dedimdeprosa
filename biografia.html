@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Biografia do Personagem</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    textarea {
+      width: 100%;
+      height: 300px;
+      padding: 1rem;
+      font-size: 1rem;
+      resize: vertical;
+    }
+    .menu {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Biografia do Personagem</h1>
+    <p>Escreva abaixo a história do seu personagem. Seja criativo!</p>
+
+    <textarea id="biografia" placeholder="Digite aqui a biografia do seu personagem..."></textarea>
+
+    <div class="menu">
+      <button onclick="prevStep()">Voltar</button>
+      <button onclick="salvarBiografia()">Próximo</button>
+    </div>
+  </div>
+  <script src="comum.js"></script>
+    <script src="biografia.js"></script>
+</body>
+</html>

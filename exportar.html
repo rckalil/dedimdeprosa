@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ficha de Vampiro: A Máscara</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <!-- Imagem da esquerda -->
+  <img src="img/rosa.png" class="imagem-lateral esquerda" alt="Imagem Esquerda"/>
+
+  <!-- Imagem da direita -->
+  <img src="img/vinho.png" class="imagem-lateral direita" alt="Imagem Direita"/>
+  <div class="container">
+    <h1>Vampiro: A Máscara</h1>
+    
+    <!-- Etapa 3: Exportar -->
+    <section id="step3" class="step">
+      <h2>Ficha Completa</h2>
+    <div id="characterSheet" class="character-sheet-box">
+      <h3>Informações Básicas e história</h3>
+      <p><strong>Nome:</strong> <span id="nome"></span></p>
+      <p><strong>Clã:</strong> <span id="cla"></span></p>
+
+      <div class="historia"></div>
+
+      <p id="biografia"></p>
+
+      <h3>Atributos</h3>
+      <ul>
+        <li><strong>Força:</strong> <span id="forca"></span></li>
+        <li><strong>Destreza:</strong> <span id="destreza"></span></li>
+        <li><strong>Vigor:</strong> <span id="vigor"></span></li>
+        <li><strong>Carisma:</strong> <span id="carisma"></span></li>
+        <li><strong>Manipulação:</strong> <span id="manipulacao"></span></li>
+        <li><strong>Auto-controle:</strong> <span id="autocontrole"></span></li>
+        <li><strong>Percepção:</strong> <span id="percepcao"></span></li>
+        <li><strong>Inteligência:</strong> <span id="inteligencia"></span></li>
+        <li><strong>Raciocínio:</strong> <span id="raciocinio"></span></li>
+      </ul>
+      <h3>Habilidades</h3>
+      <div class="attribute-dropzones">
+        <h3>Talentos</h3>
+        <ul>
+          <li><strong>Prontidao:</strong> <span id="prontidao"></span> <span id="prontidao-especial" class="especial"></span></li>
+            <li><strong>Esportes:</strong> <span id="esportes"></span> <span id="esportes-especial" class="especial"></span></li>
+            <li><strong>Briga:</strong> <span id="briga"></span> <span id="briga-especial" class="especial"></span></li>
+            <li><strong>Esquiva:</strong> <span id="esquiva"></span> <span id="esquiva-especial" class="especial"></span></li>
+            <li><strong>Empatia:</strong> <span id="empatia"></span> <span id="empatia-especial" class="especial"></span></li>
+            <li><strong>Expressão:</strong> <span id="expressao"></span> <span id="expressao-especial" class="especial"></span></li>
+            <li><strong>Intimidação:</strong> <span id="intimidacao"></span> <span id="intimidacao-especial" class="especial"></span></li>
+            <li><strong>Liderança:</strong> <span id="lideranca"></span> <span id="lideranca-especial" class="especial"></span></li>
+            <li><strong>Manha:</strong> <span id="manha"></span> <span id="manha-especial" class="especial"></span></li>
+            <li><strong>Lábia:</strong> <span id="labia"></span> <span id="labia-especial" class="especial"></span></li>
+        </ul>
+
+        <h3>Perícias</h3>
+          <ul>
+            <li><strong>Empatia com animais:</strong> <span id="empatia-animais"></span> <span id="empatia-animais-especial" class="especial"></span></li>
+            <li><strong>Ofícios:</strong> <span id="oficios"></span> <span id="oficios-especial" class="especial"></span></li>
+            <li><strong>Condução:</strong> <span id="conducao"></span> <span id="conducao-especial" class="especial"></span></li>
+            <li><strong>Etiqueta:</strong> <span id="etiqueta"></span> <span id="etiqueta-especial" class="especial"></span></li>
+            <li><strong>Armas de Fogo:</strong> <span id="armas-fogo"></span> <span id="armas-especial" class="especial"></span></li>
+            <li><strong>Armas Brancas:</strong> <span id="armas-brancas"></span> <span id="armas-brancas-especial" class="especial"></span></li>
+            <li><strong>Performance:</strong> <span id="performance"></span> <span id="performance-especial" class="especial"></span></li>
+            <li><strong>Segurança:</strong> <span id="seguranca"></span> <span id="seguranca-especial" class="especial"></span></li>
+            <li><strong>Furtividade:</strong> <span id="furtividade"></span> <span id="furtividade-especial" class="especial"></span></li>
+            <li><strong>Sobrevivência:</strong> <span id="sobrevivencia"></span> <span id="sobrevivencia-especial" class="especial"></span></li>
+          </ul>
+
+        <h3>Conhecimentos</h3>
+          <ul>
+            <li><strong>Acadêmicos:</strong> <span id="academicos"></span> <span id="academicos-especial" class="especial"></span></li>
+            <li><strong>Computador:</strong> <span id="computador"></span> <span id="computador-especial" class="especial"></span></li>
+            <li><strong>Finanças:</strong> <span id="financas"></span> <span id="financas-especial" class="especial"></span></li>
+            <li><strong>Investigação:</strong> <span id="investigacao"></span> <span id="investigacao-especial" class="especial"></span></li>
+            <li><strong>Direito:</strong> <span id="direito"></span> <span id="direito-especial" class="especial"></span></li>
+            <li><strong>Linguística:</strong> <span id="linguistica"></span> <span id="linguistica-especial" class="especial"></span></li>
+            <li><strong>Medicina:</strong> <span id="medicina"></span> <span id="medicina-especial" class="especial"></span></li>
+            <li><strong>Ocultismo:</strong> <span id="ocultismo"></span> <span id="ocultismo"></span></li>
+            <li><strong>Política:</strong> <span id="politica"></span> <span id="politica-especial" class="especial"></span></li>
+            <li><strong>Ciência:</strong> <span id="ciencia"></span> <span id="ciencia-especial" class="especial"></span></li>
+          </ul>
+      </div>
+
+      <h3>Disciplinas</h3>
+      <ul>
+        <li><span id="d1"></span></li>
+        <li><span id="d2"></span></li>
+        <li><span id="d3"></span></li>
+      </ul>
+
+      <h3>Méritos</h3>
+      <div class="meritos"></div>
+      <h3>Falhas</h3>
+      <div class="falhas"></div>
+    </div>
+    </section>
+    <div class="menu">
+      <button onclick="prevStep()">Voltar</button>
+      <button onclick="gerarPDF()">Salvar personagem para mim</button>
+      <button onclick="exportJSON()">Enviar personagem à Mestra do jogo</button>
+      <button onclick="localStorage.clear(); location.href='index.html'">Começar tudo de novo</button>
+    </div>
+    <script src="comum.js"></script>
+    <script src="exportar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </body>
+</html>

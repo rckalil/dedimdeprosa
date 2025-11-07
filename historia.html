@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Histórico do Vampiro</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Imagem lateral esquerda -->
+  <img src="img/rosa.png" class="imagem-lateral esquerda" alt="Imagem Esquerda"/>
+
+  <!-- Imagem lateral direita -->
+  <img src="img/vinho.png" class="imagem-lateral direita" alt="Imagem Direita"/>
+
+  <div class="container">
+    <h1>Histórico do Personagem</h1>
+
+    <!-- Ano de nascimento -->
+    <section>
+      <h2>Ano de Nascimento</h2>
+      <p>Indique o ano em que seu personagem nasceu. É legal ligar isso à história do seu personagem.</p>
+      <label for="birthYear">Ano (mínimo 1780):
+        <input type="number" id="birthYear" name="birthYear" min="1780" max="2025" value="1900"/>
+      </label>
+    </section>
+
+    <!-- Convicções e pessoas modelo -->
+    <section>
+      <h2>Convicções e Pessoas Modelo</h2>
+      <p>Adicione até três convicções do seu personagem. E para cada uma, indique qual a sua estrela guia nisso.</p>
+      <p>Por exemplo, posso ter convicção de que todos ao meu redor são frágeis. E o modelo são meus amigos que morreram na guerra.</p>
+      <div id="convictions">
+        <!-- Gerado por JS -->
+      </div>
+      <button type="button" onclick="addConviction()">Adicionar Convicção</button>
+    </section>
+
+    <!-- Ambição e Desejo -->
+    <section>
+      <h2>Ambição e Desejo</h2>
+      <p>A ambição do seu personagem tem haver com uma missão, algo que ele quer alcançar a longo prazo. Por exemplo, restaurar a honra à sua família.</p>
+      <label for="ambition">Ambição:
+        <input type="text" id="ambition" name="ambition" maxlength="100"/>
+      </label><br>
+      <p>O desejo envolve vontades imediatistas, necessidades urgentes do seu personagem. Se vingar do assassino do seu filho.</p>
+      <label for="desire">Desejo:
+        <input type="text" id="desire" name="desire" maxlength="100"/>
+      </label>
+    </section>
+
+    <!-- Botão de salvar -->
+    <div class="menu">
+      <button onclick="prevStep()">Voltar</button>
+      <button onclick="saveHistoryInfo()">Próximo</button>
+    </div>
+  </div>
+
+  <script src="comum.js"></script>
+  <script src="historia.js"></script>
+</body>
+</html>

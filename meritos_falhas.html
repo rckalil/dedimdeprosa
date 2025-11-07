@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Méritos e Falhas</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Imagens laterais -->
+  <img src="img/rosa.png" class="imagem-lateral esquerda" alt="Imagem Esquerda"/>
+  <img src="img/vinho.png" class="imagem-lateral direita" alt="Imagem Direita"/>
+
+  <div class="container">
+    <h1>Méritos e Falhas</h1>
+    <p>Pontos restantes: <span id="pontosRestantes">5</span></p>
+    <button onclick="resetPoints()">Limpar</button>
+
+    <!-- MÉRITOS -->
+    <section class="lcol">
+      <h2>Méritos</h2>
+
+      <div class="categoria-merito">
+        <h3>Físicos</h3>
+        <ul id="meritosFisicos" class="lista-opcoes"></ul>
+      </div>
+
+      <div class="categoria-merito">
+        <h3>Mentais</h3>
+        <ul id="meritosMentais" class="lista-opcoes"></ul>
+      </div>
+
+      <div class="categoria-merito">
+        <h3>Sociais</h3>
+        <ul id="meritosSociais" class="lista-opcoes"></ul>
+      </div>
+
+      <div class="categoria-merito">
+        <h3>Sobrenaturais</h3>
+        <ul id="meritosSobrenaturais" class="lista-opcoes"></ul>
+      </div>
+    </section>
+
+    <!-- FALHAS -->
+    <section class="rcol">
+      <h2>Falhas</h2>
+
+      <div class="categoria-falha">
+        <h3>Físicas</h3>
+        <ul id="falhasFisicos" class="lista-opcoes"></ul>
+      </div>
+
+      <div class="categoria-falha">
+        <h3>Mentais</h3>
+        <ul id="falhasMentais" class="lista-opcoes"></ul>
+      </div>
+
+      <div class="categoria-falha">
+        <h3>Sociais</h3>
+        <ul id="falhasSociais" class="lista-opcoes"></ul>
+      </div>
+
+      <div class="categoria-falha">
+        <h3>Sobrenaturais</h3>
+        <ul id="falhasSobrenaturais" class="lista-opcoes"></ul>
+      </div>
+    </section>
+
+    <!-- Botões -->
+    <div class="menu">
+      <button onclick="prevStep()">Voltar</button>
+      <button onclick="validarMeritosFalhas()">Próximo</button>
+    </div>
+  </div>
+
+  <script src="comum.js"></script>
+  <script src="meritos_falhas.js"></script>
+</body>
+</html>

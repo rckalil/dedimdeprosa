@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ficha de Vampiro: A Máscara</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <!-- Imagem da esquerda -->
+  <img src="img/rosa.png" class="imagem-lateral esquerda" alt="Imagem Esquerda"/>
+
+  <!-- Imagem da direita -->
+  <img src="img/vinho.png" class="imagem-lateral direita" alt="Imagem Direita"/>
+  <div class="container">
+    <h1>Vampiro: A Máscara</h1>
+
+    <!-- Etapa 1: escolha de distribuição -->
+    <section id="step1" class="dist">
+        <h2>Escolha o tipo de distribuição</h2>
+        <p>Se você quiser ter um leque amplo de habilidades, escolha uma opção com vários números.</p>
+        <p>Uma opção com menos números, permite que você foque em certas habilidades.</p>
+        <form id="distributionForm">
+            <label>
+                <input type="radio" name="distribution" value="jack" checked>
+                Jack <p>3, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1,1 , 1, 1, 1, 1, 1, 1</p>
+            </label><br>
+            <label>
+                <input type="radio" name="distribution" value="balanced">
+                Balanceada <p>3, 3, 3, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1</p>
+            </label><br>
+            <label>
+                <input type="radio" name="distribution" value="specialist">
+                Especialista <p>4, 3, 3, 3, 2, 2, 2, 1, 1, 1</p>
+            </label>
+        </form>
+    </section>
+
+    <!-- Etapa 2: habilidades (arrastar e soltar) -->
+    <section id="step2" class="step">
+      <h2>Distribuição de habilidades</h2>
+      <p>Arraste os valores abaixo para os habilidades. Cada número só pode ser usado uma vez.</p>
+
+      <div class="drag-area">
+        <h4>Valores disponíveis:</h4>
+        <div id="valuesPool" class="values-pool">
+          <!-- Os valores serão criados dinamicamente pelo JS ao escolher uma opção acima -->
+        </div>
+      </div>
+
+      <div class="attribute-dropzones">
+        <h3>Talentos</h3>
+        <div class="attr-group">
+          <div class="dropzone" data-attr="prontidao">Prontidão</div>
+          <div class="dropzone" data-attr="esportes">Esportes</div>
+          <div class="dropzone" data-attr="briga">Briga</div>
+          <div class="dropzone" data-attr="esquiva">Esquiva</div>
+          <div class="dropzone" data-attr="empatia">Empatia</div>
+          <div class="dropzone" data-attr="expressao">Expressão</div>
+          <div class="dropzone" data-attr="intimidacao">Intimidação</div>
+          <div class="dropzone" data-attr="lideranca">Liderança</div>
+          <div class="dropzone" data-attr="manha">Manha</div>
+          <div class="dropzone" data-attr="labia">Lábia</div>
+        </div>
+
+        <h3>Perícias</h3>
+        <div class="attr-group">
+          <div class="dropzone" data-attr="empatia-animais">Empatia com animais</div>
+          <div class="dropzone" data-attr="oficios">Ofícios</div>
+          <div class="dropzone" data-attr="conducao">Condução</div>
+          <div class="dropzone" data-attr="etiqueta">Etiqueta</div>
+          <div class="dropzone" data-attr="armas-fogo">Armas de Fogo</div>
+          <div class="dropzone" data-attr="armas-brancas">Armas Brancas</div>
+          <div class="dropzone" data-attr="performance">Performance</div>
+          <div class="dropzone" data-attr="seguranca">Segurança</div>
+          <div class="dropzone" data-attr="furtividade">Furtividade</div>
+          <div class="dropzone" data-attr="sobrevivencia">Sobrevivência</div>
+        </div>
+
+        <h3>Conhecimentos</h3>
+        <div class="attr-group">
+          <div class="dropzone" data-attr="academicos">Acadêmicos</div>
+          <div class="dropzone" data-attr="computador">Computador</div>
+          <div class="dropzone" data-attr="financas">Finanças</div>
+          <div class="dropzone" data-attr="investigacao">Investigação</div>
+          <div class="dropzone" data-attr="direito">Direito</div>
+          <div class="dropzone" data-attr="linguistica">Linguística</div>
+          <div class="dropzone" data-attr="medicina">Medicina</div>
+          <div class="dropzone" data-attr="ocultismo">Ocultismo</div>
+          <div class="dropzone" data-attr="politica">Política</div>
+          <div class="dropzone" data-attr="ciencia">Ciência</div>
+        </div>
+      </div>
+
+      <div class="menu">
+        <button onclick="prevStep()">Voltar</button>
+        <button onclick="validateDraggedHabilities()">Próximo</button>
+      </div>
+    </section>
+    <script src="comum.js"></script>
+    <script src="habilidades.js"></script>
+  </body>
+</html>
