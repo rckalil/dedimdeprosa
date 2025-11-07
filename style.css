@@ -249,6 +249,8 @@ textarea#biografia {
     max-width: 500px; /* Define uma largura máxima para a caixa */
     width: 90%;      /* A caixa ocupará 90% da tela em dispositivos menores */
     height: 300px; /* Altura mínima para o conteúdo aparecer */
+    max-height: 300px;
+    overflow-y: auto;
     
     /* 2. Centralização Horizontal */
     margin: 40px auto; /* 'auto' nas laterais centraliza o bloco */
@@ -258,7 +260,7 @@ textarea#biografia {
     border: 1px solid #ff0000; /* Borda sutil */
     border-radius: 8px; /* Cantos arredondados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    padding: 30px; /* Espaçamento interno para o texto não colar nas bordas */
+    padding: 50px; /* Espaçamento interno para o texto não colar nas bordas */
     
     /* 4. Alinhamento do Conteúdo (Texto e Botões) */
     color: #000000;

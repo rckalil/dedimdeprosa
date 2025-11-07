@@ -12,18 +12,43 @@ const textosTutorial = [
     "Aqui, destacado em verde, temos o nome do personagem, muito simples",
 
     "Logo depois do nome, temos o Fôlego do personagem.\n\n" +
-    "O Fôlego basicamente indica o nível do seu personagem. Todo o resto depende de quanto fôlego você tem.\n\n" +
-    "O personagem mais simples possui 4 de fôlego. Geralmente, um aventureiro começa com um pouco mais, indicando seu ânimo diferenciado, que o motiva frente aos desafios."
+    "O nível do personagem é baseado em seu fôlego. A partir do fôlego, são definidos os Atributos, Mandingas e Práticas.\n\n" +
+    "O fôlego representa a energia do personagem - o quanto ele pode suportar pressão durante a ação. Quando toma dano ou realiza uma atividade muito desgastante, o personagem perde fôlego.\n\n" +
+    "Após descanso esse fôlego é recuperado. Se o fôlego do personagem chegar a 0, ele desmaia exausto.\n\n" +
+    "O personagem mais simples possui 4 de fôlego. Geralmente, um aventureiro começa com um pouco mais, indicando seu ânimo diferenciado, que o motiva frente aos desafios.",
+
+    "Há 4 atributos. Cada atributo é representado por um dado. Quando fizer algo com um atributo, você joga o dado dele. Então, quanto maior for o dado, mais chances você tem de ter sucesso.\n\n" +
+    "Você escolhe os dados do seu personagem, mas a soma deles deve ser igual ao seu fôlego (falei que era importante) vezes 4. Como Manoel possui fôlego 5, ele pode ter atributos que valem juntos 20. Como veremos mais à frente que Manoel era do exército, seus atributos de atenção e potência são melhores.\n\n" +
+    "Mas o que é atenção, tato e esses trem aí, afinal?",
+
+    "Atenção é referente à sua capacidade de prestar atenção no seu entorno, coordenar diversas tarefas.\n\n" +
+    "Você pode usar atenção para procurar um objeto perdido, observar alguém passando lá longe, organizar uma festa.",
+
+    "Concentração é sobre sua capacidade de focar em uma tarefa ou pessoa específica, atentar aos detalhes.\n\n" +
+    "Ler uma receita e cozinhar um doce, montar um quebra-cabeças, limpar o ferimento de um amigo.\n\n" +
+    "Atenção e concentração são como opostos. Ambos estão relacionados ao seu foco, mas enquanto atenção é sobre o exterior, concentração é mais sobre tarefas pontuais.",
+
+    "Potência implica sua capacidade de se impor, de moldar o exterior. Está relacionado à força física.\n\n" +
+    "Você vai usar potência quando quiser bater em alguém, empurrar um móvel, apostar uma corrida.",
+
+    "Tato é referente a delicadeza, cuidado. A capacidade de perceber nuances, estabelecer conexões.\n\n" +
+    "Enganar alguém, acalmar um cachorro com medo, dançar.\n\n" +
+    "Potência e tato também são opostos. Os dois têm energia. Potência é sobre impor energia, sobre seus arredores. Tato tem haver com primeiro receber estímulos do mundo.",
+
+    "Se você quiser muito escalar um muro, e o Narrador do jogo diz que você precisa de um 5, mas você só tira 4, você pode se esforçar.\n\n" +
+    "O esforço permite que você receba +1 na hora, mas você vai ter -1 no atributo oposto por um tempo. Geralmente é até vocês passarem de uma situação à outra."
 ];
 
 const destaquePorSlide = [
     null,                  // Slide 0: Nada destacado (ou o nome, se for a primeira coisa)
     "ficha-nome",          // Slide 1: Foca no Nome
     "ficha-folego",     // Slide 2: Foca no bloco de Atributos
-    "attr-potencia",       // Slide 3: Foca apenas no atributo Potência
-    "ficha-citacoes",      // Slide 4: Foca nas citações
-    "ficha-habilidades"    // Slide 5: Foca nas habilidades/ataques
-    // ... adicione mais IDs conforme seus slides
+    "ficha-atributos",       // Slide 3: Foca apenas no atributo Potência
+    "attr-atencao",      // Slide 4: Foca nas citações
+    "attr-concentracao",    // Slide 5: Foca nas habilidades/ataques
+    "attr-potencia",
+    "attr-tato",
+    "ficha-atributos"
 ];
 
 let indiceTutorial = 0; 
