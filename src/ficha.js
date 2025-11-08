@@ -3,11 +3,11 @@
 // Mapeamento dos tipos de dado (string) para seus valores numéricos (máximo)
 // Embora você deva somar o dado, para um limite é mais comum somar o valor base (o dado).
 const dadoValorMap = {
-    "1d4": 4,
-    "1d6": 6,
-    "1d8": 8,
-    "1d10": 10,
-    "1d12": 12
+    "4": 4,
+    "6": 6,
+    "8": 8,
+    "10": 10,
+    "12": 12
     // Adicione outros se houver (ex: 1d20 para habilidades)
 };
 
@@ -65,13 +65,13 @@ function checkAttrLimit() {
 
     // 1. Caso de EXCESSO
     if (somaAtributos > limite) {
-        feedbackElement.textContent = "⚠️ Esses atributos são muito altos pro Fôlego atual!";
+        feedbackElement.textContent = "Esses atributos são muito altos pro Fôlego atual!";
         feedbackElement.style.color = 'red';
         document.querySelector('.ficha').classList.add('erro-limite'); 
 
     // 2. Caso de COMPLETO (Soma bate com o limite)
     } else if (somaAtributos === limite) {
-        feedbackElement.textContent = "✅ Seus atributos estão completos!";
+        feedbackElement.textContent = "Seus atributos estão completos!";
         feedbackElement.style.color = 'green';
         document.querySelector('.ficha').classList.remove('erro-limite');
         

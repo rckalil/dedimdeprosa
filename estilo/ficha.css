@@ -45,9 +45,9 @@
     }
 
 #atencao, #potencia, #tato, #concentracao {
-    width:10px;
+    width:40px;
     height:10px;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 input::-webkit-input-placeholder {
@@ -58,7 +58,7 @@ input::-webkit-input-placeholder {
 input {
     background-color: #ffffff;
     color:black;
-    font-size: larger;
+    font-size: small;
 }
 
 #feedback-limite{
@@ -67,4 +67,9 @@ input {
 
 .attr-block {
     display: flex;
+}
+
+.margin-no {
+    margin: 0;
+    margin-top: 8px;
 }

@@ -36,16 +36,37 @@
             </form>
             <form class="atributos">
                 <div>
-                <label for="atencao">Atenção</label>
+                <label for="atencao" class="margin-no">Atenção</label>
                 <div class="attr-block">
-                <p>1d</p>
-                <input list="dados" id="atencao" placeholder="Atenção" onchange="checkAttrLimit()">
+                <p class="margin-no">1d</p>
+                <input list="dados" id="atencao" onchange="checkAttrLimit()">
                 </div>
                 </div>
                 
-                <input list="dados" id="potencia" placeholder="Potência" onchange="checkAttrLimit()">
-                <input list="dados" id="tato" placeholder="Tato" onchange="checkAttrLimit()">
-                <input list="dados" id="concentracao" placeholder="Concentração" onchange="checkAttrLimit()">
+                <div>
+                <label for="potencia" class="margin-no">Potência</label>
+                <div class="attr-block">
+                <p class="margin-no">1d</p>
+                <input list="dados" id="potencia" onchange="checkAttrLimit()">
+                </div>
+                </div>
+                
+                <div>
+                <label for="tato" class="margin-no">Tato</label>
+                <div class="attr-block">
+                <p class="margin-no">1d</p>
+                <input list="dados" id="tato" onchange="checkAttrLimit()">
+                </div>
+                </div>
+                
+                <div>
+                <label for="concentracao" class="margin-no">Concentração</label>
+                <div class="attr-block">
+                <p class="margin-no">1d</p>
+                <input list="dados" id="concentracao" onchange="checkAttrLimit()">
+                </div>
+                </div>
+                
                 <datalist id="dados">
                     <option value="4">
                     <option value="6">
