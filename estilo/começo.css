@@ -1,0 +1,108 @@
+.conteudo {
+  /* 1. Largura e Altura */
+    max-width: 500px; /* Define uma largura máxima para a caixa */
+    width: 90%;      /* A caixa ocupará 90% da tela em dispositivos menores */
+    min-height: 100px; /* Altura mínima para o conteúdo aparecer */
+    
+    /* 2. Centralização Horizontal */
+    margin: 40px auto; /* 'auto' nas laterais centraliza o bloco */
+}
+
+.jogo {
+    /* 1. Largura e Altura */
+    max-width: 500px; /* Define uma largura máxima para a caixa */
+    width: 90%;      /* A caixa ocupará 90% da tela em dispositivos menores */
+    height: 300px; /* Altura mínima para o conteúdo aparecer */
+    max-height: 300px;
+    overflow-y: auto;
+    
+    /* 2. Centralização Horizontal */
+    margin: 40px auto; /* 'auto' nas laterais centraliza o bloco */
+    
+    /* 3. Estilo Visual (Opcional, mas recomendado) */
+    background-color: #ddffe6; /* Um fundo claro para destacar */
+    border: 1px solid #ff0000; /* Borda sutil */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 50px; /* Espaçamento interno para o texto não colar nas bordas */
+    
+    /* 4. Alinhamento do Conteúdo (Texto e Botões) */
+    color: #000000;
+    text-align: center; /* Centraliza textos e elementos inline (como botões) */
+}
+
+/* --- Layout Básico da Ficha --- */
+.container-c-sheet {
+    /* max-width: 1000px; */
+    margin: auto;
+    /* padding: 5rem; */
+    display: flex;
+}
+
+.sheet-col {
+    max-width: 300px;
+    flex: 1; /* Faz as duas colunas terem a mesma largura */
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* --- Estilo Específico da Coluna Esquerda --- */
+.left-col {
+    /* Exemplo: Nome e Valor Flutuante */
+    .sheet-header {
+        display: flex;
+        align-items: flex-end; /* Alinha o texto do nome e o valor */
+        margin-bottom: 20px;
+    }
+    .sheet-name-box {
+        flex: 1;
+        text-align: left;
+    }
+    .sheet-name-box p {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding-bottom: 5px;
+    }
+    .sheet-float-value {
+        font-size: 2em;
+        font-weight: bold;
+        color: #666;
+    }
+
+    /* Grid de Atributos 2x2 */
+    .sheet-stats-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        border: 1px solid #000000;
+        height: 300px; /* Altura fixa para emular o desenho */
+    }
+    .stat-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        border: 1px solid #000000; /* Linhas de divisão */
+        /* Zera o peso da linha central interna */
+        &:nth-child(1), &:nth-child(2) { border-top: none; }
+        &:nth-child(1), &:nth-child(3) { border-left: none; }
+        &:nth-child(2), &:nth-child(4) { border-right: none; }
+        &:nth-child(3), &:nth-child(4) { border-bottom: none; }
+    }
+}
+
+
+/* --- CLASSE DE DESTAQUE --- */
+.highlight {
+    /* Cor de fundo que você quer usar para destacar */
+    background-color: #c7ff67 !important; /* Amarelo/Dourado */
+    /* Adiciona uma transição suave para o efeito */
+    transition: background-color 0.4s ease, box-shadow 0.4s ease; 
+    box-shadow: 0 0 10px rgba(255, 153, 0, 0.7);
+}
+
+.atributo {
+  font-size: medium;
+}
