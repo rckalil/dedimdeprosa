@@ -31,7 +31,7 @@
                 
                 <div>
                 <label for="folego">Fôlego</label>
-                <input type="number" id="folego" max="20" min="0" onchange="checkAttrLimit()">
+                <input type="number" id="folego" value="4" max="12" min="0" oninput="checkAttrLimit(); checkMandingas();">
                 </div>
             </form>
             <form class="atributos">
@@ -76,11 +76,26 @@
                 </datalist>
             </form>
             
+        <div class="mandingas">
+            <div class="mandingas-container">
+                <h3>Mandingas</h3>
+                <small id="feedback-mandingas"></small>
+                
+                <div id="lista-mandingas">
+                    </div>
+
+                <form id="form-mandingas">
+                    <input 
+                        type="text" 
+                        id="input-mandinga" 
+                        maxlength="30" 
+                        placeholder="Nova Mandinga"
+                    />
+                    <button id="btn-adicionar-mandinga" onclick="adicionarMandinga()">+</button>
+                </form>
+            </div>
         </div>
         <div class="biografia">
-
-        </div>
-        <div class="mandingas">
 
         </div>
         <div class="praticas">

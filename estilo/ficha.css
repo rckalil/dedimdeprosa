@@ -38,10 +38,10 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         border: 1px solid #000000;
-        height: 15vw;
+        height: 12vw;
         margin-top: 5vh;
         margin-left: 5vw;
-        width: 15vw;
+        width: 16vw;
     }
 
 #atencao, #potencia, #tato, #concentracao {

@@ -86,3 +86,104 @@ function checkAttrLimit() {
     // Retorna true/false se está dentro do limite (útil para botões de AVANÇAR)
     return somaAtributos <= limite;
 }
+
+// --- FUNÇÃO DE ADICIONAR E EXCLUIR MANDINGAS ---
+
+function adicionarMandinga() {
+
+    const input = document.getElementById('input-mandinga');
+    const lista = document.getElementById('lista-mandingas');
+    const mandingaTexto = input.value.trim();
+
+    if (mandingaTexto === "") {
+        alert("A Mandinga não pode estar vazia!");
+        return;
+    }
+    
+    // 1. Cria o novo elemento (Div container)
+    const novoItem = document.createElement('div');
+    novoItem.classList.add('mandinga-item');
+    
+    const textoElement = document.createElement('span');
+    textoElement.textContent = mandingaTexto;
+
+    // 2. Cria o botão de remoção
+    const btnRemover = document.createElement('button');
+    btnRemover.textContent = 'x';
+    btnRemover.classList.add('btn-remover');
+    
+    // 3. Define a função de remoção
+    btnRemover.onclick = () => {
+        lista.removeChild(novoItem); 
+        checkMandingas(); // RECHECK APÓS EXCLUSÃO
+    };
+    
+    // 4. Monta e adiciona o item
+    novoItem.appendChild(textoElement);
+    novoItem.appendChild(btnRemover);
+    lista.prepend(novoItem); 
+
+    // 5. Limpa o input e faz a verificação
+    input.value = '';
+    checkMandingas(); // RECHECK APÓS ADIÇÃO
+}
+
+// --- FUNÇÃO DE VERIFICAÇÃO DE LIMITE DE MANDINGAS ---
+
+function checkMandingas() {
+    const folegoInput = document.getElementById('folego');
+    const folego = parseInt(folegoInput.value, 10) || 0;
+    
+    // A regra: 1 Mandinga a cada 3 Fôlego (Arredondado para baixo)
+    const limite = Math.floor(folego / 3);
+    
+    const lista = document.getElementById('lista-mandingas');
+    // Conta quantas Mandingas existem atualmente
+    const mandingasAtuais = lista.getElementsByClassName('mandinga-item').length;
+    
+    // Encontra ou cria o elemento de feedback
+    let feedbackElement = document.getElementById('feedback-mandingas');
+    if (!feedbackElement) {
+        // Assume que o h3 mais próximo (Mandingas) é o local
+        const mandingasDiv = lista.closest('.mandingas-container');
+        feedbackElement = document.createElement('small');
+        feedbackElement.id = 'feedback-mandingas';
+        mandingasDiv.appendChild(feedbackElement);
+    }
+    
+    // --- Lógica de Mensagens Personalizadas ---
+    
+    // Caso 1: EXCESSO
+    if (mandingasAtuais > limite) {
+        feedbackElement.textContent = `⚠️ Você possui Mandingas demais! O limite é ${limite} para o Fôlego atual.`;
+        feedbackElement.style.color = 'red';
+    
+    // Caso 2: COMPLETO
+    } else if (mandingasAtuais === limite) {
+        feedbackElement.textContent = `✅ Mandingas completas (${limite} de ${limite}).`;
+        feedbackElement.style.color = 'green';
+        
+    // Caso 3: FALTANDO
+    } else {
+        const faltam = limite - mandingasAtuais;
+        feedbackElement.textContent = `Você precisa adicionar mais ${faltam} Mandinga(s). Limite: ${limite}.`;
+        feedbackElement.style.color = '#dfb921'; // Amarelo/aviso
+    }
+    
+    // Opcional: Desativar a adição se o limite for atingido para evitar excesso
+    const inputMandinga = document.getElementById('input-mandinga');
+    const btnAdicionar = document.getElementById('btn-adicionar-mandinga');
+    const limiteAtingido = (mandingasAtuais >= limite);
+    
+    if (limiteAtingido) {
+        // Se já atingiu o limite, desativa o botão de adição
+        btnAdicionar.disabled = true;
+        inputMandinga.disabled = true;
+        inputMandinga.placeholder = "Limite de Mandingas atingido.";
+    } else {
+        // Caso contrário, habilita
+        btnAdicionar.disabled = false;
+        inputMandinga.disabled = false;
+        inputMandinga.placeholder = "Nova Mandinga";
+    }
+}
