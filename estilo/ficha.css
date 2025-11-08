@@ -1,0 +1,70 @@
+
+.pagina {
+    display: flex;
+    margin-top: 5vh;;
+}
+
+.present {
+    width: 25vw;
+    text-align: justify;
+}
+
+.ficha {
+    margin-left: 5vh;
+    display: flex;
+    border: 1vh solid #ffb048;
+    width: 60vw;
+    height: 75vh;
+}
+
+.coluna {
+    display: block;
+}
+
+.cabecalho {
+    margin-top: 5vh;
+    margin-left: 5vw;
+    width: 10vw;
+    display: flex;
+}
+
+#nome {
+    font-size: medium;
+    margin-right: 1vw;
+}
+
+.atributos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        border: 1px solid #000000;
+        height: 15vw;
+        margin-top: 5vh;
+        margin-left: 5vw;
+        width: 15vw;
+    }
+
+#atencao, #potencia, #tato, #concentracao {
+    width:10px;
+    height:10px;
+    margin-top: 15px;
+}
+
+input::-webkit-input-placeholder {
+    font-size: x-small;
+    
+}
+
+input {
+    background-color: #ffffff;
+    color:black;
+    font-size: larger;
+}
+
+#feedback-limite{
+    margin-top: 3vh;
+}
+
+.attr-block {
+    display: flex;
+}

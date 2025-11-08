@@ -1,6 +1,7 @@
 const pages = [
   "index.html",
   "começo.html",
+  "ficha.html"
 ];
 
 function getBasePath() {
@@ -75,5 +76,9 @@ function prevStep() {
 }
 
 function menu() {
-  window.location.href = ".." + getBasePath() + "index.html";
+  window.location.href = "../" + "index.html";
+}
+
+function ficha() {
+  window.location.href = "site/" + "ficha.html";
 }
