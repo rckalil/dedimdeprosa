@@ -106,3 +106,68 @@
 .atributo {
   font-size: medium;
 }
+
+/* ================================================= */
+/* 📱 AJUSTES PARA CELULAR DEITADO (MAX-WIDTH: 768px) */
+/* ================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* 1. CAIXAS CENTRAIS: Simplificando larguras */
+    .conteudo, .jogo {
+        /* Ocupa quase a largura total da tela */
+        max-width: 95vw; 
+        width: 95%; 
+        padding: 20px; /* Diminui o padding de 50px para caber mais conteúdo */
+        margin: 20px auto;
+    }
+    
+    /* Corrige o problema da altura fixa do .jogo em telas pequenas */
+    .jogo {
+        height: auto; /* Remove a altura fixa */
+        max-height: 70vh; /* Usa a altura da tela, mas permite rolagem */
+        overflow-y: auto;
+    }
+
+    /* 2. LAYOUT PRINCIPAL DA FICHA: Empilhar Colunas */
+    .container-c-sheet {
+        flex-direction: column; /* Transforma as duas colunas em uma pilha vertical */
+        gap: 20px; /* Espaço entre as colunas empilhadas */
+        padding: 10px 0;
+    }
+
+    /* 3. COLUNAS INDIVIDUAIS: Ocupam a largura total */
+    .sheet-col {
+        max-width: 95%; 
+        margin: 0 auto; /* Centraliza a coluna */
+        padding: 15px;
+    }
+    
+    /* 4. GRID DE ATRIBUTOS: Ajustar para ser mais compacto */
+    .sheet-stats-grid {
+        height: auto; /* Deixa a altura se ajustar ao conteúdo */
+        width: 100%;
+        /* O conteúdo do grid (estatísticas) precisa de um pouco mais de espaço */
+    }
+    .stat-box {
+        font-size: 1.2em; /* Reduz o tamanho da fonte para não estourar */
+        padding: 5px;
+    }
+    
+    /* 5. Estilos aninhados (sintaxe &:) */
+    /* Você usou sintaxe SCSS/SASS no CSS padrão, o que não é compatível. 
+       Se você não está usando um pré-processador, precisará desaninhá-los. */
+    
+    /* Exemplo de correção (se você não usa SASS/SCSS): */
+    .left-col .sheet-header {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 20px;
+    }
+    
+    /* Corrigindo a borda do stat-box para ser compatível em todas as telas */
+    .stat-box:nth-child(1), .stat-box:nth-child(2) { border-top: none; }
+    .stat-box:nth-child(1), .stat-box:nth-child(3) { border-left: none; }
+    .stat-box:nth-child(2), .stat-box:nth-child(4) { border-right: none; }
+    /* .stat-box:nth-child(3), .stat-child(4) { border-bottom: none; } */
+}

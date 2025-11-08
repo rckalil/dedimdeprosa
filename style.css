@@ -78,3 +78,54 @@ pre {
   width: 20vw;
 }
 
+/* ================================================= */
+/* 📱 AJUSTES PARA CELULAR DEITADO (MAX-WIDTH: 768px) */
+/* ================================================= */
+
+@media screen and (max-width: 768px) {
+    
+    /* 1. CONTAINER CENTRAL: Deve ocupar mais espaço */
+    .container {
+        /* Deixa de ser 40% da tela, passa a ser quase total */
+        max-width: 95vw; 
+        padding: 1rem; /* Diminui um pouco o padding interno */
+        margin: 10px auto; /* Mais compacto nas margens */
+    }
+
+    /* 2. IMAGENS LATERAIS: Remover ou esconder */
+    /* Elas gastam muito espaço e atrapalham o fluxo em telas estreitas */
+    .imagem-lateral {
+        display: none !important; 
+    }
+
+    /* 3. MENU: Posicionamento fixo ou flutuante deve ser removido */
+    .menu {
+        position: static; /* Volta ao fluxo normal do documento */
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        /* Usa flexbox para centralizar botões, se houver mais de um */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Garante que os botões quebrem a linha se necessário */
+    }
+    
+    /* 4. INPUTS e SELECTS: Garantir que ocupem bem o espaço */
+    input, select {
+        width: 100%; /* Ocupa toda a largura do .container */
+        box-sizing: border-box; /* Garante que padding e border não aumentem a largura */
+    }
+    
+    /* 5. TITULOS E TEXTO: Centralizar para melhor leitura */
+    h1, h2, p {
+        text-align: center;
+    }
+    
+    /* 6. BOTÕES: Aumentar área de toque */
+    button {
+        padding: 0.75rem 1.25rem; 
+        font-size: 1em;
+        /* Quebra linha entre eles para ficarem empilhados, se for o caso */
+        width: auto; 
+    }
+}
