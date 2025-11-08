@@ -90,6 +90,7 @@ function checkAttrLimit() {
 // --- FUNÇÃO DE ADICIONAR E EXCLUIR MANDINGAS ---
 
 function adicionarMandinga() {
+    console.log("oinpin")
 
     const input = document.getElementById('input-mandinga');
     const lista = document.getElementById('lista-mandingas');
@@ -126,6 +127,7 @@ function adicionarMandinga() {
     // 5. Limpa o input e faz a verificação
     input.value = '';
     checkMandingas(); // RECHECK APÓS ADIÇÃO
+    return;
 }
 
 // --- FUNÇÃO DE VERIFICAÇÃO DE LIMITE DE MANDINGAS ---
