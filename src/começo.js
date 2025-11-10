@@ -155,6 +155,13 @@ function gerenciarDestaque(indice) {
         const elementoAlvo = document.getElementById(idParaDestacar);
         if (elementoAlvo) {
             elementoAlvo.classList.add('highlight');
+            elementoAlvo.style.display = "block";
+            if (idParaDestacar === "ficha-atributos") {
+                elementoAlvo.style.display = "grid";
+            }
+            if (idParaDestacar.includes("attr")) {
+                 elementoAlvo.style.display = "flex";
+            }
         }
     }
 }
