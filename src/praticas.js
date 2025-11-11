@@ -128,7 +128,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // ------------------------------------------------------------------
 
 function getPraticasSelecionadas() {
-    const checkboxes = document.querySelectorAll('#lista-praticas input[type="checkbox"]');
+    const checkboxes = document.querySelectorAll('#equipamentoMostruario input[type="checkbox"]');
     const praticasArray = [];
     
     checkboxes.forEach(cb => {
@@ -136,6 +136,7 @@ function getPraticasSelecionadas() {
             praticasArray.push(cb.getAttribute('data-nome'));
         }
     });
+    console.log(praticasArray)
     return praticasArray;
 }
 
