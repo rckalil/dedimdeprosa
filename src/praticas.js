@@ -3,6 +3,8 @@ const equipamentoData = {
     "Atenção": {
         "Luneta": [3 ,"Permite rolar Atenção para observação a longas distâncias."],
         "Tapa-olho": [4, "Permite rolar Atenção para enxergar no escuro."],
+        "Bússola": [4, "Concede Atenção +2 para se localizar."],
+        "Capa": [5, "Concede Atenção +2 para se esconder."]
     },
     "Concentração": {
         "Atadura": [3 ,"Permite rolar Concentração +1 para suturar feridas."],
@@ -133,7 +135,11 @@ function getPraticasSelecionadas() {
     
     checkboxes.forEach(cb => {
         if (cb.checked) {
-            praticasArray.push(cb.getAttribute('data-nome'));
+            const attr = cb.getAttribute('data-atributo')
+            const items = equipamentoData[attr];
+            const itemNome = cb.getAttribute('data-nome')
+            const [nivelRequerido, descricao] = items[itemNome];
+            praticasArray.push([itemNome+" ("+attr+" nível "+nivelRequerido+"): "+descricao]);
         }
     });
     console.log(praticasArray)
@@ -234,6 +240,7 @@ function criarMostruarioDePraticas(praticasSalvas) {
                     <input type="checkbox" 
                         data-nome="${itemNome}"
                         data-nivel="${nivelRequerido}"
+                        data-atributo="${atributoNome}"
                         onchange="checkPraticasLimit()"
                         ${isSelecionado ? "checked" : ""}
                         ${!isDisponivel ? "disabled" : ""}
