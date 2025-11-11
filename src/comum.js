@@ -1,7 +1,7 @@
 const pages = [
-  "index.html",
   "começo.html",
-  "ficha.html",
+  "../index.html",
+  // "ficha.html",
   "bio.html",
   "atributos.html",
   "mandingas.html",
@@ -87,4 +87,8 @@ function menu() {
 
 function ficha() {
   window.location.href = "site/" + "bio.html";
+}
+
+function tutorial() {
+  window.location.href = "site/" + "começo.html";
 }

@@ -6,7 +6,7 @@
   <title>Definição de Práticas</title>
   <link rel="stylesheet" href="../style.css"/>
   <link rel="stylesheet" href="../estilo/ficha.css"/>
-</head>
+  </head>
 <body>
   <div class="container">
     <h1>Práticas e Equipamentos</h1>
@@ -15,28 +15,12 @@
     <small>Regra: 1 Prática a cada 2 pontos de Fôlego.</small>
     <hr>
     
-    <div id="lista-praticas" class="mandingas-container">
-        </div>
+    <p class="aviso-proposta">
+        <strong class="especial">Aviso:</strong> Você pode selecionar até o limite de práticas. Se o equipamento que você deseja não estiver na lista, entre em contato para propor a adição ao jogo!
+    </p>
 
-    <form id="form-praticas">
-        <input 
-            type="text" 
-            list="equipamentos-disponiveis"
-            id="input-pratica" 
-            placeholder="Adicionar Prática ou Equipamento"
-        />
-        <button type="submit" id="btn-adicionar-pratica">+</button>
-    </form>
-
-    <div id="descricao-equipamento" class="clan-desc" style="display: none; margin-top: 10px; text-align: left;">
-    </div>
-    
-    <small id="aviso-proposta">
-        Se o equipamento que você deseja não estiver na lista, <strong class="especial">entre em contato</strong> para propor a adição ao jogo!
-    </small>
-
-    <datalist id="equipamentos-disponiveis">
-        </datalist>
+    <ul id="lista-praticas" class="lista-opcoes">
+        </ul>
 
     <small id="feedback-praticas" style="margin-top: 10px; display: block;"></small>
 
