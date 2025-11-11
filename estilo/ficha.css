@@ -45,8 +45,8 @@
     }
 
 #atencao, #potencia, #tato, #concentracao {
-    width:40px;
-    height:10px;
+    width:60px;
+    height:15px;
     margin-top: 5px;
 }
 
@@ -72,4 +72,56 @@ input {
 .margin-no {
     margin: 0;
     margin-top: 8px;
+}
+
+.praticas-grid-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+    /* overflow-x: auto; */
+}
+
+.atributo-coluna {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    min-width: 250px; /* Garante espaço suficiente para o conteúdo */
+    max-height: 50vh; /* Define uma altura MÁXIMA da coluna (Ex: 50% da altura da tela) */
+    display: flex; /* Adicionado flex para organizar o h3 e a ul dentro da coluna */
+    flex-direction: column;
+}
+
+/* O elemento UL (a lista real de itens) é quem vai rolar */
+.atributo-coluna .lista-opcoes {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    
+    /* MODIFICAÇÕES CRUCIAIS AQUI */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical apenas quando necessário */
+    flex-grow: 1; /* Permite que a lista ocupe todo o espaço restante da coluna */
+    padding-right: 5px; /* Adiciona um pequeno padding para que a barra de rolagem não cole na borda */
+}
+
+/* Estilo para itens indisponíveis */
+.indisponivel {
+    opacity: 0.5;
+    pointer-events: none; /* Impede cliques */
+    cursor: not-allowed;
+}
+.indisponivel input[type="checkbox"] {
+    cursor: not-allowed;
+}
+
+.item-pratica small {
+    display: block;
+    font-size: 0.8em;
+    color: #555;
+    margin-top: 2px;
+}
+
+#loja {
+    margin-left: 100px;
 }

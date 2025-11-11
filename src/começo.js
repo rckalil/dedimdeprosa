@@ -17,8 +17,11 @@ const textosTutorial = [
     "Após descanso esse fôlego é recuperado. Se o fôlego do personagem chegar a 0, ele desmaia exausto.\n\n" +
     "O personagem mais simples possui 4 de fôlego. Geralmente, um aventureiro começa com um pouco mais, indicando seu ânimo diferenciado, que o motiva frente aos desafios.",
 
+    "A história do personagem é muito importante pra dar um gostinho ao jogo. Quando você está criando seu personagem, pensar em quem ele é e o que faz também te ajuda a escolher seus atributos, mandingas e práticas (calma, já chegaremos nas práticas).\n\n" +
+    "Você pode escrever um texto tão breve ou complexo como queira, só divirta-se. E faça um personagem que nos divirta, que dê emoção de jogar.",
+
     "Há 4 atributos. Cada atributo é representado por um dado. Quando fizer algo com um atributo, você joga o dado dele. Então, quanto maior for o dado, mais chances você tem de ter sucesso.\n\n" +
-    "Você escolhe os dados do seu personagem, mas a soma deles deve ser igual ao seu fôlego (falei que era importante) vezes 4. Como Manoel possui fôlego 5, ele pode ter atributos que valem juntos 20. Como veremos mais à frente que Manoel era do exército, seus atributos de atenção e potência são melhores.\n\n" +
+    "Você escolhe os dados do seu personagem, mas a soma deles deve ser igual ao seu fôlego (falei que era importante) vezes 4. Como Manoel possui fôlego 5, ele pode ter atributos que valem juntos 20. Como  Manoel era do exército, seus atributos de atenção e potência são melhores.\n\n" +
     "Mas o que é atenção, tato e esses trem aí, afinal?",
 
     "Atenção é referente à sua capacidade de prestar atenção no seu entorno, coordenar diversas tarefas.\n\n" +
@@ -46,14 +49,13 @@ const textosTutorial = [
     "Contudo, as mandingas têm um efeito duplo. Assim como elas expandem as capacidades do personagem, elas o limitam. Quando for apropriado, o Narrador pode dar um ponto de fôlego ao jogador para ativar a mandinga de forma negativa.\n\n" +
     "Um personagem com \"Que Deus o abençoe\" pode ser compelido a ajudar os outros, mesmo quando não é conveniente ao grupo. Um com \"Eu sou o mais forte\" pode ser extremamente impulsivo e atralhar negociações. No caso de Manoel, ele ter sido do exército pode dificultar que ele chegue despercebido nos lugares, pois muitos já o conhecem; ou algumas pessoas podem não ficar confortáveis dando informações a ele.",
 
-    "A história do personagem é muito importante pra dar um gostinho ao jogo. Quando você está criando seu personagem, pensar em quem ele é e o que faz também te ajuda a escolher seus atributos, mandingas e práticas (calma, já chegaremos nas práticas).\n\n" +
-    "Você pode escrever um texto tão breve ou complexo como queira, só divirta-se. E faça um personagem que nos divirta, que dê emoção de jogar.",
-
     "As práticas são muito importantes para o seu personagem. Elas geralmente estão ligadas a um equipamento e, além de poderem dar algum bônus, elas permitem fazer mais coisas.\n\n" +
     "Uma espada permite ataques mais fortes; com um kit médico, você pode suturar feridas; uma luneta permite ver a distâncias maiores; você pode tocar com uma flauta.\n\n" +
     "A prática é uma atividade à qual o personagem se dedica, e ela é representada pelo equipamento que ele usa. Um personagem consegue se dedicar bem a uma prática a cada 2 pontos de fôlego que possui.\n\n" +
     "Portanto, Manoel possui prática em 2 equipamentos. A espada lhe concede +2 de potência quando ele está lutando. Além disso, com a espada você pode dizer que decapitou seu inimigo ou cortou a ponte elvadiça - muito mais maneiro.\n\n" +
-    "E, ele também possui um laço. Com esse laço, Manoel não ganha bônus, mas ele pode usar sua potência para laçar os outros, prendê-los de longe.",
+    "E, ele também possui um laço. Com esse laço, Manoel não ganha bônus, mas ele pode usar sua potência para laçar os outros, prendê-los de longe.\n\n" +
+    "Cada equipamento possui um nível e um atributo relacionado. Omitimos aqui, mas na criação de personagem essas informações serão indicadas. O nível limita quem pode usar esse equipamento a depender do atributo ao qual ele está relacionado.\n\n" +
+    "Você pode praticar com um equipamento de nível até a média do seu dado, arredondado para cima. Manoel possui 1d6 em Potência. A média de 1d6, por exemplo, é 3.5, logo ele poderia ter equipamentos relacionados a potência de até nível 4.",
 
     "Bem, agora, você já pode criar seu próprio personagem. Mas não se preocupe, se ainda tiver dúvidas, vamos ver Manoel em ação, num exemplo ligeiro."
 
@@ -63,6 +65,7 @@ const destaquePorSlide = [
     null,                  // Slide 0: Nada destacado (ou o nome, se for a primeira coisa)
     "ficha-nome",          // Slide 1: Foca no Nome
     "ficha-folego",     // Slide 2: Foca no bloco de Atributos
+    "ficha-historia",
     "ficha-atributos",       // Slide 3: Foca apenas no atributo Potência
     "attr-atencao",      // Slide 4: Foca nas citações
     "attr-concentracao",    // Slide 5: Foca nas habilidades/ataques
@@ -70,7 +73,6 @@ const destaquePorSlide = [
     "attr-tato",
     "ficha-atributos",
     "ficha-mandingas",
-    "ficha-historia",
     "ficha-praticas",
     null
 ];

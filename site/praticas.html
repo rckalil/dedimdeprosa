@@ -8,25 +8,30 @@
   <link rel="stylesheet" href="../estilo/ficha.css"/>
   </head>
 <body>
-  <div class="container">
+  <div class="container" id="loja">
     <h1>Práticas e Equipamentos</h1>
     
     <p>Seu Fôlego é: <strong id="folegoDisplay"></strong>. Você pode dominar um máximo de: <strong id="maxEquipDisplay"></strong> Prática(s).</p>
-    <small>Regra: 1 Prática a cada 2 pontos de Fôlego.</small>
+    <!-- <small>Regra: 1 Prática a cada 2 pontos de Fôlego.</small> -->
     <hr>
+
+    <div id="equipamentoMostruario" class="praticas-grid-container">
+        </div>
     
-    <p class="aviso-proposta">
-        <strong class="especial">Aviso:</strong> Você pode selecionar até o limite de práticas. Se o equipamento que você deseja não estiver na lista, entre em contato para propor a adição ao jogo!
-    </p>
+    <div style="display: flex;">
+      <div>
+        <p class="aviso-proposta">
+          <!-- <strong class="especial">Aviso:</strong> Você pode selecionar até o limite de práticas. -->
+          <small>Itens indisponíveis (em cinza) exigem um dado de Atributo maior.
+          <br>Se o equipamento que você deseja não estiver na lista, entre em contato para propor a adição ao jogo!</small>
+        </p>
+        <small id="feedback-praticas" style="margin-top: 10px; display: block;"></small>
+      </div>
 
-    <ul id="lista-praticas" class="lista-opcoes">
-        </ul>
-
-    <small id="feedback-praticas" style="margin-top: 10px; display: block;"></small>
-
-    <div class="menu">
-      <button onclick="prevStep()">Voltar</button>
-      <button onclick="validateAndSavePraticas()">Próximo</button>
+      <div class="menu">
+        <button onclick="prevStep()">Voltar</button>
+        <button onclick="validateAndSavePraticas()">Próximo</button>
+      </div>
     </div>
   </div>
 
