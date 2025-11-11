@@ -57,10 +57,10 @@ const dadoValorMap = {
  * Converte a string do dado ('4' ou '12') para o valor numérico (4 ou 12).
  */
 function getValorDadoNumerico(atributoId) {
-    console.log(atributoId)
-    console.log(`ficha.atributo.${atributoId}`)
+    // console.log(atributoId)
+    // console.log(`ficha.atributo.${atributoId}`)
     const dadoString = localStorage.getItem(`ficha.atributo.${atributoId}`) || "4"; // Default para 4
-    console.log(dadoString)
+    // console.log(dadoString)
     if (!dadoString || dadoString.trim() === '') {
         return 0;
     }
@@ -114,6 +114,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('maxEquipDisplay').textContent = maxPraticas;
     
     // 3. Carregar itens salvos e construir a lista
+    // console.log(localStorage.getItem('ficha.praticas'))
     const praticasSalvasJSON = localStorage.getItem('ficha.praticas') || '[]';
     const praticasSalvas = JSON.parse(praticasSalvasJSON); 
 
@@ -139,10 +140,10 @@ function getPraticasSelecionadas() {
             const items = equipamentoData[attr];
             const itemNome = cb.getAttribute('data-nome')
             const [nivelRequerido, descricao] = items[itemNome];
-            praticasArray.push([itemNome+" ("+attr+" nível "+nivelRequerido+"): "+descricao]);
+            praticasArray.push(itemNome+" ("+attr+" nível "+nivelRequerido+"): "+descricao);
         }
     });
-    console.log(praticasArray)
+    // console.log(praticasArray)
     return praticasArray;
 }
 
@@ -224,7 +225,10 @@ function criarMostruarioDePraticas(praticasSalvas) {
             const [nivelRequerido, descricao] = items[itemNome];
             
             // Checa se o item está selecionado
-            const isSelecionado = praticasSalvas.includes(itemNome);
+            // console.log("nwdown")
+            // console.log(praticasSalvas)
+            // console.log(itemNome)
+            const isSelecionado = praticasSalvas.includes(itemNome+" ("+atributoNome+" nível "+nivelRequerido+"): "+descricao);
             
             // Checa a disponibilidade: dado atual deve ser >= nível requerido
             const isDisponivel = (limiteDado+2)/2 >= nivelRequerido;
