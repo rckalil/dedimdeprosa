@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Definição de Atributos</title>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="../estilo/ficha.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Escolha de Atributos</h1>
+    
+    <p>Seu Fôlego é: <strong id="folegoDisplay"></strong>. O limite total para seus Atributos é: <strong id="limiteDisplay"></strong>.</p>
+    <small id="feedback-limite"></small> 
+
+    <div class="attribute-group">
+        <h2>Atribuição de Dados</h2>
+        <p>Escolha o dado (valor) para cada atributo. A soma dos dados não pode exceder o Limite.</p>
+        
+        <form id="atributos-form">
+            <div class="attr-row">
+                <label for="atencao">Atenção (Percepção, Coordenação):</label>
+                <input list="dados" id="atencao" onchange="checkAttrLimit()" />
+            </div>
+
+            <div class="attr-row">
+                <label for="potencia">Potência (Força, Imposição):</label>
+                <input list="dados" id="potencia" onchange="checkAttrLimit()" />
+            </div>
+
+            <div class="attr-row">
+                <label for="tato">Tato (Delicadeza, Conexão Social):</label>
+                <input list="dados" id="tato" onchange="checkAttrLimit()" />
+            </div>
+
+            <div class="attr-row">
+                <label for="concentracao">Concentração (Foco, Detalhes):</label>
+                <input list="dados" id="concentracao" onchange="checkAttrLimit()" />
+            </div>
+        </form>
+
+        <datalist id="dados">
+            <option value="1d4"></option>
+            <option value="1d6"></option>
+            <option value="1d8"></option>
+            <option value="1d10"></option>
+            <option value="1d12"></option>
+        </datalist>
+    </div>
+
+    <div class="menu">
+      <button onclick="prevStep()">Voltar</button>
+      <button onclick="validateAndSaveAtributos()">Próximo</button>
+    </div>
+  </div>
+
+  <script src="../src/comum.js"></script>s
+  <script src="../src/atributos.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Definição de Práticas</title>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="../estilo/ficha.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Práticas e Equipamentos</h1>
+    
+    <p>Seu Fôlego é: <strong id="folegoDisplay"></strong>. Você pode dominar um máximo de: <strong id="maxEquipDisplay"></strong> Prática(s).</p>
+    <small>Regra: 1 Prática a cada 2 pontos de Fôlego.</small>
+    <hr>
+    
+    <div id="lista-praticas" class="mandingas-container">
+        </div>
+
+    <form id="form-praticas">
+        <input 
+            type="text" 
+            list="equipamentos-disponiveis"
+            id="input-pratica" 
+            placeholder="Adicionar Prática ou Equipamento"
+        />
+        <button type="submit" id="btn-adicionar-pratica">+</button>
+    </form>
+
+    <div id="descricao-equipamento" class="clan-desc" style="display: none; margin-top: 10px; text-align: left;">
+    </div>
+    
+    <small id="aviso-proposta">
+        Se o equipamento que você deseja não estiver na lista, <strong class="especial">entre em contato</strong> para propor a adição ao jogo!
+    </small>
+
+    <datalist id="equipamentos-disponiveis">
+        </datalist>
+
+    <small id="feedback-praticas" style="margin-top: 10px; display: block;"></small>
+
+    <div class="menu">
+      <button onclick="prevStep()">Voltar</button>
+      <button onclick="validateAndSavePraticas()">Próximo</button>
+    </div>
+  </div>
+
+  <script src="../src/comum.js"></script>
+  <script src="../src/praticas.js"></script>
+</body>
+</html>

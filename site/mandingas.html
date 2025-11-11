@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Definição de Mandingas</title>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="../estilo/ficha.css"/>
+  <style>
+    /* Estilo específico para o textarea */
+    textarea#mandingasInput {
+      width: 100%;
+      height: 250px;
+      padding: 1rem;
+      font-size: 1rem;
+      resize: vertical;
+      box-sizing: border-box;
+      white-space: pre-wrap; /* Preserva quebras de linha e espaços */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mandingas do Personagem</h1>
+    
+    <p>Seu Fôlego é: <strong id="folegoDisplay"></strong>. Você tem direito a um máximo de: <strong id="maxMandingasDisplay"></strong> Mandinga(s).</p>
+    <small>Lembre-se: uma Mandinga a cada 3 pontos de Fôlego.</small>
+    <hr>
+
+    <label for="mandingasInput">Liste suas Mandingas (uma por linha):</label>
+    <textarea id="mandingasInput" placeholder="Exemplo: &#10;Eu já servi à Coroa&#10;Que Deus o abençoe&#10;..."></textarea>
+    
+    <small id="feedback-mandingas"></small>
+
+    <div class="menu">
+      <button onclick="prevStep()">Voltar</button>
+      <button onclick="validateAndSaveMandingas()">Próximo</button>
+    </div>
+  </div>
+
+  <script src="../src/comum.js"></script>
+  <script src="../src/mandingas.js"></script>
+</body>
+</html>

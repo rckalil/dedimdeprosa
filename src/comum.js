@@ -1,7 +1,13 @@
 const pages = [
   "index.html",
   "começo.html",
-  "ficha.html"
+  "ficha.html",
+  "bio.html",
+  "atributos.html",
+  "mandingas.html",
+  "praticas.html",
+  "resumo.html",
+  "../index.html"
 ];
 
 function getBasePath() {
@@ -61,7 +67,7 @@ function nextStep() {
       localStorage.clear();
     }
     const nextPage = pages[currentIndex + 1];
-    window.location.href = "site/" +  nextPage;
+    window.location.href = nextPage;
   }
 }
 
@@ -71,7 +77,7 @@ function prevStep() {
 
   if (currentIndex > 0) {
     const prevPage = pages[currentIndex - 1];
-    window.location.href = "site/" + prevPage;
+    window.location.href = prevPage;
   }
 }
 
@@ -80,5 +86,5 @@ function menu() {
 }
 
 function ficha() {
-  window.location.href = "site/" + "ficha.html";
+  window.location.href = "site/" + "bio.html";
 }
