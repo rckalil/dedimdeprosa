@@ -12,17 +12,23 @@ const equipamentoData = {
         "Novelo": [4, "Permite rolar Concentração+1 para costurar."],
     },
     "Potência": {
-        "Faca": [3 ,"Concede +2 em Potência em combate. É uma ferramenta."],
+        "Faca": [3 ,"Concede +1 em Potência em combate. É uma ferramenta de corte."],
+        "Cajado": [3 ,"Concede +1 em Potência em combate. É uma ferramenta de caminhada."],
         "Espada Curta": [4, "Concede +2 em Potência em combate."],
-        "Laço": [4 ,"Permite usar Potência para agarrar alvos à distância."],
-        "Machado": [5, "Você pode desferir dois ataques de uma vez."],
+        "Laço": [4, "Permite usar Potência para agarrar alvos à distância."],
+        "Lança": [4, "Concede +1 em potência. Pode atacar a distância com potência - sem o bônus."],
+        "Foice": [5, "Você pode acertar vários inimigos com o mesmo ataque - rola potência uma vez e usa contra mais de um inimigo."],
+        "Machado": [5, "Você pode desferir dois ataques de uma vez - rola potência duas vezes."],
         "Arco e Flecha": [5, "Concede Potência +1 em ataques à distância."],
+        "Escudo": [5, "Quando receber um ataque, você pode sofrer -1 de potência para evitar perda de fôlego."],
+        "Facão": [5, "Concede +2 em Potência em combate. É uma ferramenta de corte."],de
     },
     "Tato": {
         "Boné": [3, "Concede Tato +1 para Enganar."],
         "Flauta": [3, "Permite rolar Tato para atrair a atenção de multidões ou animais."],
         "Maquiagem": [4, "Concede Tato +1 para Seduzir."],
         "Pião": [4, "Permite usar Tato para atacar."],
+        "Sela": [4, "Concede Tato +1 para Cavalgar."],
         "Bolinhas de Gude": [5, "Uma vez por dia, rola seu tato (obtendo X) e aumenta em X a dificuldade de uma rolagem. O ônus pode ser usado em inimigos não muito longe."],
     }
 };
