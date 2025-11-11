@@ -21,7 +21,7 @@ const equipamentoData = {
         "Machado": [5, "Você pode desferir dois ataques de uma vez - rola potência duas vezes."],
         "Arco e Flecha": [5, "Concede Potência +1 em ataques à distância."],
         "Escudo": [5, "Quando receber um ataque, você pode sofrer -1 de potência para evitar perda de fôlego."],
-        "Facão": [5, "Concede +2 em Potência em combate. É uma ferramenta de corte."],de
+        "Facão": [5, "Concede +2 em Potência em combate. É uma ferramenta de corte."],
     },
     "Tato": {
         "Boné": [3, "Concede Tato +1 para Enganar."],
