@@ -17,9 +17,11 @@ function calcularMaxPraticas(folego) {
 function carregarResumo() {
     // --- 1. Dados Iniciais ---
     const nome = localStorage.getItem('ficha.nome') || "Não preenchido";
+    const jogador = localStorage.getItem('ficha.jogador') || "Não preenchido";
     const folego = parseInt(localStorage.getItem('ficha.folego'), 10) || 0;
     const biografia = localStorage.getItem('ficha.biografia') || "Sem biografia.";
 
+    document.getElementById('jogadorDisplay').textContent = jogador;
     document.getElementById('nomeDisplay').textContent = nome;
     document.getElementById('folegoDisplay').textContent = folego;
     document.getElementById('biografiaDisplay').textContent = biografia;
@@ -103,6 +105,7 @@ window.addEventListener('DOMContentLoaded', carregarResumo);
 function getFichaCompleta() {
     // Coletar todos os dados da ficha
     const nome = localStorage.getItem('ficha.nome') || "N/A";
+    const jogador = localStorage.getItem('ficha.jogador') || "N/A";
     const folego = parseInt(localStorage.getItem('ficha.folego'), 10) || 0;
     const biografia = localStorage.getItem('ficha.biografia') || "N/A";
 
@@ -124,6 +127,7 @@ function getFichaCompleta() {
 
     // Montar o objeto final da Ficha
     return {
+        jogador: jogador,
         nome: nome,
         folego: folego,
         biografia: biografia,
