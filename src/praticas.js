@@ -28,11 +28,12 @@ const equipamentoData = {
         "Espada Curta": [4, "Concede +2 em Potência em combate."],
         "Laço": [4, "Permite usar Potência para agarrar alvos à distância."],
         "Lança": [4, "Concede +1 em potência. Pode atacar a distância com potência - sem o bônus."],
+        "Rapieira": [4, "Você pode desferir dois ataques de uma vez - rola potência duas vezes."],
         "Foice": [5, "Você pode acertar vários inimigos com o mesmo ataque - rola potência uma vez e usa contra mais de um inimigo."],
-        "Machado": [5, "Você pode desferir dois ataques de uma vez - rola potência duas vezes."],
         "Arco e Flecha": [5, "Concede Potência +1 em ataques à distância."],
         "Escudo": [5, "Quando receber um ataque, você pode sofrer -1 de potência para evitar perda de fôlego."],
         "Facão": [5, "Concede +2 em Potência em combate. É uma ferramenta de corte."],
+        "Machado": [6, "Quando atacar, você pode sofre -1 de potência para maximizar seu dado."],
     },
     "Tato": {
         "Boné": [3, "Concede Tato +1 para enganar."],
@@ -42,6 +43,7 @@ const equipamentoData = {
         "Pião": [4, "Permite usar Tato para atacar."],
         "Sela": [4, "Concede Tato +1 para cavalgar."],
         "Bolinhas de Gude": [5, "Uma vez por dia, rola seu tato (obtendo X) e aumenta em X a dificuldade de uma rolagem. O ônus pode ser usado em inimigos não muito longe."],
+        "Colar enfeitiçado": [6, "Você pode rolar tato para controlar alguém, e consegue se obtiver um valor maior que o fôlego dele. A cada vez que conseguir controlar alguém, toma -1 em seu tato."]
     }
 };
 

@@ -6,36 +6,9 @@
   <title>Resumo da Ficha</title>
   <link rel="stylesheet" href="../style.css"/>
   <link rel="stylesheet" href="../estilo/ficha.css"/>
+  <link rel="stylesheet" href="../estilo/resumo.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <style>
-    /* Estilos para o Resumo */
-    .resumo-section {
-        margin-bottom: 25px;
-        padding: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #f9f9f9;
-    }
-    .resumo-section h3 {
-        border-bottom: 2px solid #555;
-        padding-bottom: 5px;
-        margin-top: 0;
-    }
-    .resumo-list {
-        list-style: none;
-        padding-left: 0;
-    }
-    .resumo-list li {
-        margin-bottom: 5px;
-    }
-    #biografiaDisplay {
-        white-space: pre-wrap; /* Preserva formatação do textarea */
-        border-left: 3px solid #dfb921;
-        padding-left: 10px;
-        margin-top: 10px;
-    }
-  </style>
 </head>
 
 <body>
@@ -76,9 +49,43 @@
     <div class="menu">
       <button onclick="prevStep()">Voltar para a última etapa</button>
       <button onclick="sendByEmail()">Enviar por E-mail</button>
-      <button onclick="exportPDF()">Baixar Ficha (PDF)</button>
+      <button onclick="gerarPDFVisual()">Baixar Ficha (PDF)</button>
       <button onclick="nextStep()">Começar tudo de novo</button>
   </div>
+
+  <section id="fichaFormatada" style="display: none;">
+    <div class="ficha-apresentacao">
+        <h2><span id="apresentacao-nome"></span></h2>
+        
+        <p id="apresentacao-biografia"></p>
+
+        <table class="tabela-atributos">
+            <thead>
+                <tr>
+                    <th>Atenção</th>
+                    <th>Concentração</th>
+                    <th>Potência</th>
+                    <th>Tato</th>
+                    <th>Fôlego</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-attr="atencao"></td>
+                    <td data-attr="concentracao"></td>
+                    <td data-attr="potencia"></td>
+                    <td data-attr="tato"></td>
+                    <td data-attr="folego"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div id="apresentacao-mandingas"></div>
+        
+        <div id="apresentacao-praticas"></div>
+
+    </div>
+</section>
 
   <script src="../src/comum.js"></script>
   <script src="../src/resumo.js"></script>

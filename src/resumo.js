@@ -234,3 +234,68 @@ function exportPDF() {
         alert("Houve um erro ao tentar gerar o PDF.");
     });
 }
+
+// ATENÇÃO: Você precisa incluir as libs html2canvas e jspdf no seu HTML para esta função!
+
+function gerarPDFVisual() {
+    const ficha = getFichaCompleta();
+    
+    // 1. Injeta os dados no bloco HTML escondido
+    document.getElementById('apresentacao-nome').textContent = ficha.nome;
+    document.getElementById('apresentacao-biografia').textContent = ficha.biografia;
+    
+    // Preenche a tabela de atributos (tbody: <tr> <td>)
+    const tableRow = document.querySelector('#fichaFormatada .tabela-atributos tbody tr');
+    if (tableRow) {
+        tableRow.querySelector('[data-attr="folego"]').textContent = ficha.folego;
+        tableRow.querySelector('[data-attr="atencao"]').textContent = ficha.atributos.atencao;
+        tableRow.querySelector('[data-attr="potencia"]').textContent = ficha.atributos.potencia;
+        tableRow.querySelector('[data-attr="tato"]').textContent = ficha.atributos.tato;
+        tableRow.querySelector('[data-attr="concentracao"]').textContent = ficha.atributos.concentracao;
+    }
+    
+    // Preenche Mandingas e Práticas (como listas ou blocos de texto)
+    const mandingasDiv = document.getElementById('apresentacao-mandingas');
+    mandingasDiv.innerHTML = '<h4>Mandingas:</h4>' + ficha.mandingas.map(m => `<p style="margin: 5px 0;">'${m}'</p>`).join('');
+
+    const praticasDiv = document.getElementById('apresentacao-praticas');
+    praticasDiv.innerHTML = '<h4>Práticas:</h4>' + ficha.praticas.map(p => `<p style="margin: 5px 0;">• ${p}</p>`).join('');
+
+
+    // 2. Seleciona o elemento estilizado para captura
+    const element = document.getElementById('fichaFormatada');
+    element.style.display = 'block'; // Temporariamente mostra para o canvas
+
+    // 3. Captura e exporta
+    alert("Gerando PDF visual... Aguarde.");
+    
+    html2canvas(element, { 
+        scale: 3, // Alta resolução para texto claro
+        allowTaint: true 
+    }).then(canvas => {
+        // ... (Lógica de jsPDF e save) ...
+        const { jsPDF } = window.jspdf;
+        const imgData = canvas.toDataURL('image/png');
+        // --- NOVO FORMATO DE SLIDE (16:9) ---
+        const slideWidth = 254;   // Largura (W) em mm
+        const slideHeight = 30 + ((canvas.height * slideWidth) / canvas.width); // Altura (H) em mm
+        
+        const pdf = new jsPDF({
+            orientation: 'landscape',
+            unit: 'mm',
+            format: [slideWidth, slideHeight]
+        });
+
+        const imgWidth = 250;
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+        pdf.addImage(imgData, 'PNG', 15, 15, imgWidth, imgHeight); // Posição (15, 15)
+        
+        const nomeArquivo = `ficha-${ficha.nome.replace(/\s/g, '_')}-visual.pdf`;
+        pdf.save(nomeArquivo);
+
+        // 4. Limpeza
+        element.style.display = 'none'; // Esconde o bloco novamente
+        alert("Download do PDF visual concluído!");
+    });
+}

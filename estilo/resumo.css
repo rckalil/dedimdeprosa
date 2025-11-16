@@ -1,0 +1,58 @@
+/* Estilos para o Resumo */
+.resumo-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.resumo-section h3 {
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+.resumo-list {
+    list-style: none;
+    padding-left: 0;
+}
+.resumo-list li {
+    margin-bottom: 5px;
+}
+#biografiaDisplay {
+    white-space: pre-wrap; /* Preserva formatação do textarea */
+    border-left: 3px solid #dfb921;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.ficha-apresentacao {
+    width: 500px; /* Largura fixa ideal para exportação */
+    padding: 20px;
+    background-color: #f7f0e8; /* Cor de fundo bege claro */
+    border: 3px solid #cc0000; /* Borda vermelha forte */
+    border-radius: 8px;
+    font-family: serif;
+}
+.ficha-apresentacao h2 {
+    background-color: #b38b6d; /* Cor marrom do cabeçalho */
+    color: white;
+    padding: 5px 10px;
+    margin: -20px -20px 10px -20px; /* Estende a cor para a borda */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 1.2em;
+}
+
+/* Estilo para a tabela de atributos */
+.tabela-atributos {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 1.1em;
+}
+.tabela-atributos th, .tabela-atributos td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
