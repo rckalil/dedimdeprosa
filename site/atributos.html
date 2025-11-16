@@ -19,26 +19,56 @@
         <p>Escolha o dado (valor) para cada atributo. A soma dos dados não pode exceder o Limite.</p>
         
         <form id="atributos-form">
-            <div class="attr-row">
-                <label for="atencao">Atenção (Percepção, Coordenação):</label>
-                <input list="dados" id="atencao" onchange="checkAttrLimit()" />
-            </div>
+    <p>Use os menus suspensos para atribuir um dado (valor) a cada Atributo. A soma não deve ultrapassar o limite.</p>
+    
+    <div class="attr-row">
+        <label for="atencao">Atenção:</label>
+        <select id="atencao" onchange="checkAttrLimit()">
+            <option value="">Selecione o Dado</option>
+            <option value="1d4">1d4</option>
+            <option value="1d6">1d6</option>
+            <option value="1d8">1d8</option>
+            <option value="1d10">1d10</option>
+            <option value="1d12">1d12</option>
+        </select>
+    </div>
 
-            <div class="attr-row">
-                <label for="potencia">Potência (Força, Imposição):</label>
-                <input list="dados" id="potencia" onchange="checkAttrLimit()" />
-            </div>
+    <div class="attr-row">
+        <label for="concentracao">Concentração:</label>
+        <select id="concentracao" onchange="checkAttrLimit()">
+            <option value="">Selecione o Dado</option>
+            <option value="1d4">1d4</option>
+            <option value="1d6">1d6</option>
+            <option value="1d8">1d8</option>
+            <option value="1d10">1d10</option>
+            <option value="1d12">1d12</option>
+        </select>
+    </div>
 
-            <div class="attr-row">
-                <label for="tato">Tato (Delicadeza, Conexão Social):</label>
-                <input list="dados" id="tato" onchange="checkAttrLimit()" />
-            </div>
+    <div class="attr-row">
+        <label for="potencia">Potência:</label>
+        <select id="potencia" onchange="checkAttrLimit()">
+            <option value="">Selecione o Dado</option>
+            <option value="1d4">1d4</option>
+            <option value="1d6">1d6</option>
+            <option value="1d8">1d8</option>
+            <option value="1d10">1d10</option>
+            <option value="1d12">1d12</option>
+        </select>
+    </div>
 
-            <div class="attr-row">
-                <label for="concentracao">Concentração (Foco, Detalhes):</label>
-                <input list="dados" id="concentracao" onchange="checkAttrLimit()" />
-            </div>
-        </form>
+    <div class="attr-row">
+        <label for="tato">Tato:</label>
+        <select id="tato" onchange="checkAttrLimit()">
+            <option value="">Selecione o Dado</option>
+            <option value="1d4">1d4</option>
+            <option value="1d6">1d6</option>
+            <option value="1d8">1d8</option>
+            <option value="1d10">1d10</option>
+            <option value="1d12">1d12</option>
+        </select>
+    </div>
+</form>
 
         <datalist id="dados">
             <option value="1d4"></option>

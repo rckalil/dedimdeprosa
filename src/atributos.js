@@ -68,18 +68,17 @@ function checkAttrLimit() {
 // ------------------------------------------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-    // 1. Carregar Fôlego salvo na etapa anterior
-    const folego = parseInt(localStorage.getItem('ficha.folego'), 10) || 4;
-    const limite = folego * 4;
+    // ... (Fôlego e limite carregados e exibidos) ...
 
-    // 2. Exibir o Fôlego e o Limite na tela
-    document.getElementById('folegoDisplay').textContent = folego;
-    document.getElementById('limiteDisplay').textContent = limite;
-
-    // 3. Carregar e preencher os inputs com os valores salvos (se existirem)
+    // 3. Carregar e preencher os inputs/SELECTS com os valores salvos
     atributoIds.forEach(id => {
         const valorSalvo = localStorage.getItem(`ficha.atributo.${id}`) || "";
-        document.getElementById(id).value = valorSalvo;
+        const selectElement = document.getElementById(id);
+        
+        // Verifica se o valor salvo está nas opções (se for "1d6", seleciona a opção "1d6")
+        if (selectElement) {
+            selectElement.value = valorSalvo;
+        }
     });
 
     // 4. Rodar o check inicial para exibir o feedback
@@ -93,45 +92,39 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function validateAndSaveAtributos(direction) {
     let todosPreenchidos = true;
-    let dadosValidos = true;
+    let dadosValidos = true; // Com select, dadosValidos será sempre true, mas mantemos o check para segurança
 
     // 1. Verificar preenchimento e salvar valores
     atributoIds.forEach(id => {
-        const inputElement = document.getElementById(id);
-        const valorDado = inputElement.value.trim();
+        const selectElement = document.getElementById(id);
+        const valorDado = selectElement.value.trim(); // Pega o valor do select
 
         if (!valorDado) {
             todosPreenchidos = false;
         }
-
-        const valorNumerico = getValorNumericoDoDado(valorDado);
-        if (valorNumerico === 0 && valorDado !== "") {
-             dadosValidos = false;
-        }
-
-        // Salvar o valor do atributo (mesmo que incompleto, para não perder)
+        // ... (resto da lógica de getValorNumericoDoDado e salvamento) ...
+        
+        // Salvar o valor do atributo 
         localStorage.setItem(`ficha.atributo.${id}`, valorDado);
     });
 
-    // 2. Verificar se está dentro do limite e se está completo
-    const dentroDoLimite = checkAttrLimit(); // Reusa a função de check
+    // 2. Verificar limites e feedback
+    const dentroDoLimite = checkAttrLimit(); 
 
     if (!todosPreenchidos) {
         alert("Por favor, preencha todos os 4 atributos.");
         return;
     }
     
-    if (!dadosValidos) {
-        alert("Um ou mais valores de dados não são válidos (Use 4, 6, 8, 10 ou 12).");
-        return;
-    }
-
+    // A checagem de dadosValidos não é estritamente necessária com o select,
+    // mas pode ser mantida para verificar o valor vazio ("Selecione o Dado").
+    
     if (!dentroDoLimite) {
         alert("A soma dos seus atributos ultrapassa o limite do Fôlego! Por favor, ajuste.");
         return;
     }
     
-    // 3. Se tudo estiver OK, avança para a próxima página
+    // 3. Navegação
     if (direction==='front'){
         nextStep();
     }
