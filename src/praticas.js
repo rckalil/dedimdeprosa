@@ -21,6 +21,7 @@ const equipamentoData = {
         "Dicionário": [4, "Permite rolar Concentração +1 para compreender outra língua."],
         "Enciclopédia": [5, "Permite rolar Concentração +2 para obter uma informação."],
         "Talismã": [5, "Uma vez por dia, role sua concentração +2 para afastar maus espíritos."],
+        "Luvas explosiva": [5, "Uma vez por dia, rola sua concentração (obtendo X) e recebe X cargas explosivas. Com cada uma você pode invocar uma bola de fogo que causa Concentração + 1 de dano."],
     },
     "Potência": {
         "Punhal": [3 ,"Concede +1 em Potência em combate. É uma ferramenta de corte."],
@@ -33,7 +34,7 @@ const equipamentoData = {
         "Arco e Flecha": [5, "Concede Potência +1 em ataques à distância."],
         "Escudo": [5, "Quando receber um ataque, você pode sofrer -1 de potência para evitar perda de fôlego."],
         "Facão": [5, "Concede +2 em Potência em combate. É uma ferramenta de corte."],
-        "Machado": [6, "Quando atacar, você pode sofre -1 de potência para maximizar seu dado."],
+        "Machado": [5, "Quando atacar, você pode sofre -1 de potência para maximizar seu dado."],
     },
     "Tato": {
         "Boné": [3, "Concede Tato +1 para enganar."],
@@ -42,8 +43,9 @@ const equipamentoData = {
         "Maquiagem": [4, "Concede Tato +1 para seduzir."],
         "Pião": [4, "Permite usar Tato para atacar."],
         "Sela": [4, "Concede Tato +1 para cavalgar."],
+        "Flauta Encantada": [4, "Você pode sofrer -1 em tato para invocar um animal para ajudar. Role Concentração, e o Fôlego do animal é o resultado."],
         "Bolinhas de Gude": [5, "Uma vez por dia, rola seu tato (obtendo X) e aumenta em X a dificuldade de uma rolagem. O ônus pode ser usado em inimigos não muito longe."],
-        "Colar enfeitiçado": [6, "Você pode rolar tato para controlar alguém, e consegue se obtiver um valor maior que o fôlego dele. A cada vez que conseguir controlar alguém, toma -1 em seu tato."]
+        "Colar enfeitiçado": [5, "Você pode rolar tato para controlar alguém, e consegue se obtiver um valor maior que o fôlego dele. A cada vez que conseguir controlar alguém, toma -1 em seu tato."]
     }
 };
 
@@ -245,7 +247,7 @@ function criarMostruarioDePraticas(praticasSalvas) {
             // console.log("nwdown")
             // console.log(praticasSalvas)
             // console.log(itemNome)
-            const isSelecionado = praticasSalvas.includes(itemNome+" ("+atributoNome+" nível "+nivelRequerido+"): "+descricao);
+            let isSelecionado = praticasSalvas.includes(itemNome+" ("+atributoNome+" nível "+nivelRequerido+"): "+descricao);
             
             // Checa a disponibilidade: dado atual deve ser >= nível requerido
             const isDisponivel = (limiteDado+2)/2 >= nivelRequerido;
@@ -254,6 +256,7 @@ function criarMostruarioDePraticas(praticasSalvas) {
             li.classList.add('item-pratica');
             if (!isDisponivel) {
                 li.classList.add('indisponivel');
+                isSelecionado = false;
             }
             
             li.innerHTML = `
