@@ -2,19 +2,28 @@
 const equipamentoData = {
     "Atenção": {
         "Luneta": [3 ,"Permite rolar Atenção para observação a longas distâncias."],
+        "Apito": [3 ,"Permite se comunicar à distância."],
         "Tapa-olho": [4, "Permite rolar Atenção para enxergar no escuro."],
         "Bússola": [4, "Concede Atenção +2 para se localizar."],
-        "Capa": [5, "Concede Atenção +2 para se esconder."]
+        // "Avião de papel": [4, "Permite se comunicar à distância."],
+        "Capa": [5, "Concede Atenção +2 para se esconder."],
+        "Chicote": [5, "Permite usar Atenção para atacar."],
+        // "Bumerangue": [6, "Permite usar Atenção para atacar à distância."]
     },
     "Concentração": {
         "Atadura": [3 ,"Permite rolar Concentração +1 para suturar feridas."],
         "Cachimbo": [3, "Permite rolar Concentração +1 para lembrar uma conversa."],
         "Baú": [3, "Uma vez por dia, rola sua concentração (obtendo X) e aumenta em X uma rolagem. O bônus pode ser usado para você ou para um aliado próximo."],
+        "Lupa": [3, "Concede Concentração +1 para investigar"],
         "Livro de Receitas": [4, "Uma vez por dia, rola sua concentração (obtendo X) e prepara X quitutes que recuperam 1 de fôlego. O fôlego pode ser dado a você ou a um aliado próximo."],
         "Novelo": [4, "Permite rolar Concentração+1 para costurar."],
+        "Pederneira": [4, "Permite rolar Concentração +1 para fazer fogo."],
+        "Dicionário": [4, "Permite rolar Concentração +1 para compreender outra língua."],
+        "Enciclopédia": [5, "Permite rolar Concentração +2 para obter uma informação."],
+        "Talismã": [5, "Uma vez por dia, role sua concentração +2 para afastar maus espíritos."],
     },
     "Potência": {
-        "Faca": [3 ,"Concede +1 em Potência em combate. É uma ferramenta de corte."],
+        "Punhal": [3 ,"Concede +1 em Potência em combate. É uma ferramenta de corte."],
         "Cajado": [3 ,"Concede +1 em Potência em combate. É uma ferramenta de caminhada."],
         "Espada Curta": [4, "Concede +2 em Potência em combate."],
         "Laço": [4, "Permite usar Potência para agarrar alvos à distância."],
@@ -26,11 +35,12 @@ const equipamentoData = {
         "Facão": [5, "Concede +2 em Potência em combate. É uma ferramenta de corte."],
     },
     "Tato": {
-        "Boné": [3, "Concede Tato +1 para Enganar."],
-        "Flauta": [3, "Permite rolar Tato para atrair a atenção de multidões ou animais."],
-        "Maquiagem": [4, "Concede Tato +1 para Seduzir."],
+        "Boné": [3, "Concede Tato +1 para enganar."],
+        "Gaita": [3, "Permite rolar Tato para atrair a atenção de multidões ou animais."],
+        "Luvas": [3, "Concede Tato +1 para passar a mão."],
+        "Maquiagem": [4, "Concede Tato +1 para seduzir."],
         "Pião": [4, "Permite usar Tato para atacar."],
-        "Sela": [4, "Concede Tato +1 para Cavalgar."],
+        "Sela": [4, "Concede Tato +1 para cavalgar."],
         "Bolinhas de Gude": [5, "Uma vez por dia, rola seu tato (obtendo X) e aumenta em X a dificuldade de uma rolagem. O ônus pode ser usado em inimigos não muito longe."],
     }
 };
@@ -173,7 +183,7 @@ function checkPraticasLimit() {
     return dentroDoLimite;
 }
 
-function validateAndSavePraticas() {
+function validateAndSavePraticas(direction) {
     // 1. Verificar limite
     const dentroDoLimite = checkPraticasLimit();
 
@@ -187,7 +197,12 @@ function validateAndSavePraticas() {
     localStorage.setItem('ficha.praticas', JSON.stringify(praticasSelecionadas));
 
     // 3. Se tudo estiver OK, avança para a próxima página
-    nextStep();
+    if (direction==='front'){
+        nextStep();
+    }
+    else if (direction==='back') {
+        prevStep();
+    }
 }
 
 // ------------------------------------------------------------------

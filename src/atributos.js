@@ -91,7 +91,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // --- LÓGICA DE VALIDAÇÃO E SALVAMENTO (Mantida) ---
 // ------------------------------------------------------------------
 
-function validateAndSaveAtributos() {
+function validateAndSaveAtributos(direction) {
     let todosPreenchidos = true;
     let dadosValidos = true;
 
@@ -132,5 +132,10 @@ function validateAndSaveAtributos() {
     }
     
     // 3. Se tudo estiver OK, avança para a próxima página
-    nextStep();
+    if (direction==='front'){
+        nextStep();
+    }
+    else if (direction==='back') {
+        prevStep();
+    }
 }

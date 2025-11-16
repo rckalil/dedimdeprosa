@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-function validateAndSaveMandingas() {
+function validateAndSaveMandingas(direction) {
     const mandingasText = document.getElementById('mandingasInput').value.trim();
     
     // 1. Verificar limite
@@ -89,5 +89,11 @@ function validateAndSaveMandingas() {
     localStorage.setItem('ficha.mandingas', mandingasText);
 
     // 3. Se tudo estiver OK, avança para a próxima página
-    nextStep();
+    if (direction==='front'){
+        nextStep();
+    }
+    else if (direction==='back') {
+        prevStep();
+    }
+    
 }

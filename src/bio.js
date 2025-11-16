@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('biografia').value = biografiaSalva;
 });
 
-function validateAndSaveInicio() {
+function validateAndSaveInicio(direction) {
     const nome = document.getElementById('nomePersonagem').value.trim();
     const folego = parseInt(document.getElementById('folego').value, 10);
     const biografia = document.getElementById('biografia').value.trim();
@@ -34,5 +34,10 @@ function validateAndSaveInicio() {
     localStorage.setItem('ficha.biografia', biografia);
 
     // 3. Prosseguir para a próxima etapa (a página de Atributos, por exemplo)
-    nextStep();
+    if (direction==='front'){
+        nextStep();
+    }
+    else if (direction==='back') {
+        prevStep();
+    }
 }
