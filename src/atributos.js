@@ -68,7 +68,13 @@ function checkAttrLimit() {
 // ------------------------------------------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-    // ... (Fôlego e limite carregados e exibidos) ...
+    // 1. Carregar Fôlego salvo na etapa anterior
+    const folego = parseInt(localStorage.getItem('ficha.folego'), 10) || 4;
+    const limite = folego * 4;
+
+    // 2. Exibir o Fôlego e o Limite na tela
+    document.getElementById('folegoDisplay').textContent = folego;
+    document.getElementById('limiteDisplay').textContent = limite;
 
     // 3. Carregar e preencher os inputs/SELECTS com os valores salvos
     atributoIds.forEach(id => {

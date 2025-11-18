@@ -9,6 +9,7 @@ const equipamentoData = {
         "Capa": [5, "Concede Atenção +2 para se esconder."],
         "Chicote": [5, "Permite usar Atenção para atacar."],
         // "Bumerangue": [6, "Permite usar Atenção para atacar à distância."]
+        "Braceletes de Tupã": [5, "Quando acertar um ataque, você pode sofrer -1 em Potência para dar um choque e paralisar o oponente, se o fôlego dele for menor que o seu."],
     },
     "Concentração": {
         "Atadura": [3 ,"Permite rolar Concentração +1 para suturar feridas."],
@@ -20,8 +21,9 @@ const equipamentoData = {
         "Pederneira": [4, "Permite rolar Concentração +1 para fazer fogo."],
         "Dicionário": [4, "Permite rolar Concentração +1 para compreender outra língua."],
         "Enciclopédia": [5, "Permite rolar Concentração +2 para obter uma informação."],
-        "Talismã": [5, "Uma vez por dia, role sua concentração +2 para afastar maus espíritos."],
+        "Talismã": [5, "Você pode rolar sua concentração para recuperar fôlego seu ou de um aliado próximo. Se o fizer, sofre -1 em Concentração."],
         "Luvas explosiva": [5, "Uma vez por dia, rola sua concentração (obtendo X) e recebe X cargas explosivas. Com cada uma você pode invocar uma bola de fogo que causa Concentração + 1 de dano."],
+        "Bolsa d'água": [5, "Uma vez por dia, quando ficar com 0 de Fôlego, pode estourar a bolsa para recuperar o Fôlego que perdeu por último."],
     },
     "Potência": {
         "Punhal": [3 ,"Concede +1 em Potência em combate. É uma ferramenta de corte."],
@@ -43,7 +45,7 @@ const equipamentoData = {
         "Maquiagem": [4, "Concede Tato +1 para seduzir."],
         "Pião": [4, "Permite usar Tato para atacar."],
         "Sela": [4, "Concede Tato +1 para cavalgar."],
-        "Flauta Encantada": [4, "Você pode sofrer -1 em tato para invocar um animal para ajudar. Role Concentração, e o Fôlego do animal é o resultado."],
+        "Flauta Encantada": [4, "Você pode sofrer -1 em tato para invocar um animal para ajudar. Role Tato, e o Fôlego do animal é o resultado."],
         "Bolinhas de Gude": [5, "Uma vez por dia, rola seu tato (obtendo X) e aumenta em X a dificuldade de uma rolagem. O ônus pode ser usado em inimigos não muito longe."],
         "Colar enfeitiçado": [5, "Você pode rolar tato para controlar alguém, e consegue se obtiver um valor maior que o fôlego dele. A cada vez que conseguir controlar alguém, toma -1 em seu tato."]
     }
