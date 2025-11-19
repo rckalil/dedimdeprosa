@@ -5,6 +5,7 @@ const equipamentoData = {
         "Apito": [3 ,"Permite se comunicar à distância."],
         "Tapa-olho": [4, "Permite rolar Atenção para enxergar no escuro."],
         "Bússola": [4, "Concede Atenção +2 para se localizar."],
+        "Capa da Névoa": [4, "+1 potencia, aumenta a eficácia do salto da mandinga 'Ortopressão'"],
         // "Avião de papel": [4, "Permite se comunicar à distância."],
         "Capa": [5, "Concede Atenção +2 para se esconder."],
         "Chicote": [5, "Permite usar Atenção para atacar."],
@@ -20,6 +21,7 @@ const equipamentoData = {
         "Novelo": [4, "Permite rolar Concentração+1 para costurar."],
         "Pederneira": [4, "Permite rolar Concentração +1 para fazer fogo."],
         "Dicionário": [4, "Permite rolar Concentração +1 para compreender outra língua."],
+        "Anel da Ranni": [4, "Ao atacar posso usar a alma de ranni pra aumentar minha potencia em +1 ou tirar -2 para recuperar +1 de folego.(1 vez por Cena)"],
         "Enciclopédia": [5, "Permite rolar Concentração +2 para obter uma informação."],
         "Talismã": [5, "Você pode rolar sua concentração para recuperar fôlego seu ou de um aliado próximo. Se o fizer, sofre -1 em Concentração."],
         "Luvas explosiva": [5, "Uma vez por dia, rola sua concentração (obtendo X) e recebe X cargas explosivas. Com cada uma você pode invocar uma bola de fogo que causa Concentração + 1 de dano."],
@@ -37,6 +39,7 @@ const equipamentoData = {
         "Escudo": [5, "Quando receber um ataque, você pode sofrer -1 de potência para evitar perda de fôlego."],
         "Facão": [5, "Concede +2 em Potência em combate. É uma ferramenta de corte."],
         "Machado": [5, "Quando atacar, você pode sofre -1 de potência para maximizar seu dado."],
+        "Espada Real de Duas Mãos": [5, "Concede +3 em Potência em combate."],
     },
     "Tato": {
         "Boné": [3, "Concede Tato +1 para enganar."],

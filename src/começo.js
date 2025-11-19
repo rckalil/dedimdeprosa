@@ -17,7 +17,7 @@ const textosTutorial = [
     "Após descanso esse fôlego é recuperado. Se o fôlego do personagem chegar a 0, ele desmaia exausto.\n\n" +
     "O personagem mais simples possui 4 de fôlego. Geralmente, um aventureiro começa com um pouco mais, indicando seu ânimo diferenciado, que o motiva frente aos desafios.",
 
-    "A história do personagem é muito importante pra dar um gostinho ao jogo. Quando você está criando seu personagem, pensar em quem ele é e o que faz também te ajuda a escolher seus atributos, mandingas e práticas (calma, já chegaremos nas práticas).\n\n" +
+    "A história do personagem é muito importante pra dar um gostinho ao jogo. Quando você está criando seu personagem, pensar em quem ele é e o que faz também te ajuda a escolher seus atributos, mandingas e práticas (calma, já chegaremos lá).\n\n" +
     "Você pode escrever um texto tão breve ou complexo como queira, só divirta-se. E faça um personagem que nos divirta, que dê emoção de jogar.",
 
     "Há 4 atributos. Cada atributo é representado por um dado. Quando fizer algo com um atributo, você joga o dado dele. Então, quanto maior for o dado, mais chances você tem de ter sucesso.\n\n" +
@@ -47,7 +47,7 @@ const textosTutorial = [
     "Manoel possui \"Eu já servi à Coroa\". Então, durante o jogo, ele pode gastar 1 de fôlego para usar a sua mandinga. Ele pode, por exemplo, conhecer os mapas de uma região, do tempo em que esteve no exército, então não se perde com facilidade.\n\n" +
     "Ou ele gasta um fôlego para ser bem recebido pelos aldeões de uma vila. Você sempre pode pensar em novos efeitos, conversando com o Narrador para fazer sentido na estória.\n\n" +
     "Contudo, as mandingas têm um efeito duplo. Assim como elas expandem as capacidades do personagem, elas o limitam. Quando for apropriado, o Narrador pode dar um ponto de fôlego ao jogador para ativar a mandinga de forma negativa.\n\n" +
-    "Um personagem com \"Que Deus o abençoe\" pode ser compelido a ajudar os outros, mesmo quando não é conveniente ao grupo. Um com \"Eu sou o mais forte\" pode ser extremamente impulsivo e atralhar negociações. No caso de Manoel, ele ter sido do exército pode dificultar que ele chegue despercebido nos lugares, pois muitos já o conhecem; ou algumas pessoas podem não ficar confortáveis dando informações a ele.",
+    "Um personagem com \"Que Deus o abençoe\" pode ser compelido a ajudar os outros, mesmo quando não é conveniente ao grupo. Um com \"Eu sou o mais forte\" pode ser extremamente impulsivo e atrapalhar negociações. No caso de Manoel, ele ter sido do exército pode dificultar que ele chegue despercebido nos lugares, pois muitos já o conhecem; ou algumas pessoas podem não ficar confortáveis dando informações a ele.",
 
     "As práticas são muito importantes para o seu personagem. Elas geralmente estão ligadas a um equipamento e, além de poderem dar algum bônus, elas permitem fazer mais coisas.\n\n" +
     "Uma espada permite ataques mais fortes; com um kit médico, você pode suturar feridas; uma luneta permite ver a distâncias maiores; você pode tocar com uma flauta.\n\n" +
